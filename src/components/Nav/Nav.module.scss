@@ -1,0 +1,47 @@
+@import "../../style/Mixins.scss";
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+ li{
+   @include fluid(margin-right, 35px, 70px);
+   &:last-child{
+     margin-right: 0;
+   }
+ }
+}
+.link{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+  color: #fff;
+  transition: .38s ease-in-out;
+  position: relative;
+  &:before{
+    width: 0%;
+    height: 5px;
+    background: #00FFC2;
+    position: absolute;
+    content: "";
+    @include fluid(top,31px,44px);
+    left: 50%;
+    transform: translate(-50%);
+    transition: .38s ease-in-out;
+  }
+  &:hover{
+    color: #00FFC2;
+    &:before{
+      width: 100%;
+    }
+  }
+
+}
+.active{
+  color: #00FFC2;
+  &:before{
+    width: 100%;
+  }
+}
+.navItem{
+
+}

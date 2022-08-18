@@ -12,10 +12,10 @@ const initialState = {
     error: "",
 };
 
-export const mainPageSlice = createSlice({
-    name: "mainPage",
+export const mainSlice = createSlice({
+    name: "main",
     initialState,
     reducers: {},
 });
 
-export default mainPageSlice.reducer;
+export default mainSlice.reducer;

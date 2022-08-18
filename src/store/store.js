@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
-import {productReducer} from "./slice/productSlice.js";
-import {mainPageReducer} from "./slice/mainPageSlice.js";
+import productReducer from "./slice/productSlice.js";
+import mainReducer from "./slice/mainSlice.js";
 const rootReducer = combineReducers({
     productReducer,
-    mainPageReducer,
+    mainReducer,
 
 });
 
