@@ -13,7 +13,7 @@ const initialState = {
 };
 
 export const mainPageSlice = createSlice({
-    name: "mainContent",
+    name: "mainPage",
     initialState,
     reducers: {},
 });
