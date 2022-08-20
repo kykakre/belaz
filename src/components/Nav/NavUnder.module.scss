@@ -1,0 +1,23 @@
+@import "../../style/Mixins.scss";
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include fluid(padding-top, 10px, 15px);
+  li {
+    @include fluid(margin-right, 25px, 50px);
+  }
+}
+.link {
+  color: #888888;
+  @include fluid(font-size, 12px, 14px);
+  font-weight: 500;
+  transition: 0.38s ease-in-out;
+  &:hover {
+    color: #00ffc2;
+  }
+}
+.active {
+  color: #00ffc2;
+}

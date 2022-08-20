@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 @import "../Style/Mixins";
 
 * {
@@ -10,7 +10,7 @@
 button {
   border: none;
 }
-a{
+a {
   text-decoration: none;
 }
 body {
@@ -22,4 +22,44 @@ body {
   font-style: normal;
   overflow-x: hidden;
   max-width: 100%;
+}
+
+.ant-avatar {
+  background: transparent;
+  width: fit-content;
+  height: fit-content;
+  img {
+    @include fluid(width, 18px, 20px);
+    @include fluid(height, 18px, 20px);
+    object-fit: contain;
+  }
+}
+.ant-badge-count {
+  padding: 0 0;
+}
+.ant-scroll-number {
+  @include fluid(width, 8px, 9px);
+  @include fluid(height, 8px, 9px);
+  border: none;
+  background: #00ffc2;
+  box-shadow: none;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ant-scroll-number-only-unit {
+  @include fluid(font-size, 4px, 5px);
+  line-height: 6px;
+  font-weight: 700;
+  color: #000000;
+}
+.ant-scroll-number-only {
+  @include fluid(height, 8px, 9px);
+  @include fluid(width, 8px, 9px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

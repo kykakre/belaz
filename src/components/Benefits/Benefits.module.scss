@@ -1,0 +1,79 @@
+@import "../../style/Mixins.scss";
+
+.container {
+  background: #333333;
+  position: relative;
+}
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include fluid(height, 350px, 420px);
+  background-size: cover;
+  background-image: url("../../assets/behefits/banner.png");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.content {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  @include fluid(margin-bottom, 50px, 100px);
+}
+.title {
+  @include fluid(margin-top, 50px, 110px);
+  @include fluid(font-size, 28px, 32px);
+  font-weight: 700;
+}
+.subtitle {
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(margin-bottom, 60px, 130px);
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 33px;
+  z-index: 2;
+  &:before {
+    content: "";
+    position: absolute;
+    transform: translate(-50%);
+    @include fluid(width, 100px, 150px);
+    left: 50%;
+    top: 30px;
+    height: 3px;
+    background: #00ffc2;
+    z-index: 3;
+  }
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.flex {
+  width: 48%;
+  display: flex;
+  align-items: center;
+  @include fluid(margin-bottom, 30px, 60px);
+}
+.icon {
+  @include fluid(width, 95px, 120px);
+  @include fluid(height, 90px, 115px);
+  @include fluid(margin-right, 25px, 50px);
+  object-fit: cover;
+}
+.titleItem {
+  @include fluid(font-size, 18px, 20px);
+  @include fluid(margin-bottom, 10px, 15px);
+  font-weight: 700;
+}
+.text {
+  @include fluid(font-size, 14px, 16px);
+}
