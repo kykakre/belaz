@@ -1,0 +1,32 @@
+@import "../../style/Mixins.scss";
+
+.flex{
+  @include container;
+  display: flex;
+  align-items: center;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+.input{
+  @include fluid(padding-top, 14px, 18px);
+  @include fluid(padding-bottom, 14px, 18px);
+  @include fluid(padding-left, 15px, 27px);
+  flex-grow: 1;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.button{
+  @include fluid(padding-left, 31px, 63px);
+  @include fluid(padding-right, 31px, 63px);
+  @include fluid(padding-top, 12px, 14px);
+  @include fluid(padding-bottom, 12px, 14px);
+  background: #E6E6E6;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+.icon{
+  @include fluid(width, 16px, 24px);
+  @include fluid(height, 16px, 24px);
+  object-fit: contain;
+}
