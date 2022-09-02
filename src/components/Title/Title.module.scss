@@ -1,0 +1,18 @@
+@import "../../style/Mixins.scss";
+
+.flex{
+  display: flex;
+  align-items: center;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.title{
+  @include fluid(font-size,24px, 28px);
+  font-weight: 700;
+  color: #000;
+  @include fluid(margin-right, 10px, 20px);
+}
+.arrow{
+  @include fluid(width, 10px, 14px);
+  @include fluid(height, 14px, 18px);
+  object-fit: contain;
+}

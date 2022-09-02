@@ -1,0 +1,102 @@
+@import "../../style/Mixins.scss";
+
+
+.block{
+  @include fluid(padding-top, 50px, 100px);
+  @include fluid(padding-bottom, 55px, 105px);
+  position: relative;
+}
+.back{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(360deg, #333333 0%, rgba(0, 0, 0, 0.5) 100%), url("../../assets/newsBack.png");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.form{
+  position: relative;
+  z-index: 1;
+  @include container;
+  @include fluid(padding-top, 25px, 50px);
+  @include fluid(padding-bottom, 25px, 50px);
+  @include fluid(padding-left, 45px, 95px);
+  @include fluid(padding-right, 45px, 95px);
+  background: #333333;
+  opacity: 0.95;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 35px;
+}
+.title{
+  @include fluid(font-size,28px, 32px);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  @include fluid(margin-bottom, 40px, 80px);
+  &:before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include fluid(bottom, -15px, -30px);
+    @include fluid(width, 75px, 150px);
+    height: 3px;
+    background: $green;
+  }
+}
+.flex{
+  display: flex;
+  align-items: center;
+  @include fluid(margin-bottom, 5px, 10px);
+}
+.button{
+  @include fluid(font-size,14px, 16px);color: #000;
+  font-weight: 500;
+  @include fluid(padding-left, 36px, 72px);
+  @include fluid(padding-right, 36px, 72px);
+  @include fluid(padding-top, 6px, 13px);
+  @include fluid(padding-bottom, 6px, 13px);
+  background: $green;
+  border-radius: 5px;
+  border: 2px solid $green;
+  transition: .38s ease-in-out;
+  cursor: pointer;
+  &:hover{
+    background: #333;
+    color: #fff;
+
+  }
+}
+.input{
+  background: #2B2B2B;
+  color: #fff;
+  @include fluid(font-size,14px, 16px);
+  border: none;
+  @include fluid(padding-top, 6px, 13px);
+  @include fluid(padding-bottom, 6px, 13px);
+  @include fluid(padding-left, 8px, 16px);
+  flex-grow: 1;
+  @include fluid(margin-right, 15px, 30px);
+  &::placeholder{
+    color: #727272;
+
+  }
+
+}
+.example{
+  @include fluid(font-size,12px, 14px);
+  color: #727272;
+  @include fluid(margin-bottom, 15px, 30px);
+  font-weight: 500;
+}
+.description{
+  @include fluid(font-size,12px, 14px);
+  color: #727272;
+  font-weight: 500;
+  span{
+    color: $green;
+  }
+}

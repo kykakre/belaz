@@ -1,0 +1,96 @@
+@import "../../style/Mixins.scss";
+
+.productContainer{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card{
+  background: #FFFFFF;
+  border-radius: 10px;
+  @include fluid(padding-bottom, 10px, 15px);
+  @include fluid(margin-bottom, 10px, 20px);
+  width: 18.1%;
+  margin-right: 2.3%;
+  &:nth-child(5n){
+    margin-right: 0;
+  }
+
+}
+.contain{
+  position: relative;
+  background: #ECECEC;
+  border-radius: 10px ;
+  overflow: hidden;
+@include fluid(margin-bottom, 5px, 10px);
+}
+.productImg{
+  @include fluid(width, 150px, 190px);
+  @include fluid(height, 160px, 200px);
+  object-fit: cover;
+  object-position: center;
+}
+.special{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #00CF9D;
+  color: #fff;
+  @include fluid(font-size,10px, 12px);
+  font-weight: 600;
+  @include fluid(padding-left, 4px, 8px);
+  @include fluid(padding-right, 4px, 8px);
+  @include fluid(padding-top, 2px, 3px);
+  @include fluid(padding-bottom, 2px, 3px);
+  border-radius: 0px 10px 0px 0px;
+}
+.favorite{
+  position: absolute;
+  @include fluid(top, 5px, 10px);
+  @include fluid(right, 5px, 10px);
+  cursor: pointer;
+}
+.title{
+  @include fluid(font-size,10px, 12px);
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  @include fluid(margin-bottom, 7px, 8px);
+}
+.star{
+  @include fluid(width, 8px, 10px);
+  @include fluid(height, 8px, 10px);
+  object-fit: contain;
+  @include fluid(margin-right, 4px, 5px);
+}
+.grabe{
+  @include fluid(font-size,9px, 10px);
+  color: #858585;
+  font-weight: 500;
+}
+.spaceBetween{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.price{
+  @include fluid(font-size,12px, 14px);
+  color: #000000;
+  font-weight: 600;
+}
+.buy{
+  cursor: pointer;
+  @include fluid(width, 15px, 30px);
+  @include fluid(height, 15px, 30px);
+  object-fit: contain;
+  border: 1px solid #F2F2F2;
+  border-radius: 3px;
+  @include fluid(padding-left, 3px, 6px);
+  @include fluid(padding-right, 3px, 6px);
+  @include fluid(padding-top, 3px, 6px);
+  @include fluid(padding-bottom, 3px, 6px);
+}

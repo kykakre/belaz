@@ -1,0 +1,84 @@
+@import "../../style/Mixins.scss";
+
+.footer{
+  background: #333333;
+  @include fluid(padding-top, 50px, 100px);
+  @include fluid(padding-bottom, 45px, 95px);
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  @include container;
+  align-items: center;
+}
+.item{
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+}
+.logo{
+  @include fluid(width, 170px, 208px);
+  @include fluid(height, 38px, 43px);
+  object-fit: contain;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.text{
+  @include fluid(font-size,13px, 15px);
+  @include fluid(margin-bottom, 10px, 15px);
+  color: #fff;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.title{
+  font-weight: 700;
+  @include fluid(font-size,18px, 20px);
+  line-height: 140%;
+  @include fluid(margin-bottom, 10px, 13px);
+  color: #fff;
+}
+.link{
+  @include fluid(margin-bottom, 10px, 13px);
+  color: #fff;
+  @include fluid(font-size,13px, 15px);
+  width: fit-content;
+  line-height: 140%;
+  transition: .38s ease-in-out;
+  &:hover{
+    color: $green;
+  }
+
+}
+.arrow{
+  @include fluid(width, 8px, 16px);
+  @include fluid(height, 15px, 30px);
+  cursor: pointer;
+}
+.itemLast{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.linkPhone{
+  color: $green;
+  border: 1px solid $green;
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(padding-top, 6px, 12px);
+  @include fluid(padding-bottom, 6px, 12px);
+  border-radius: 5px;
+  cursor: pointer;
+  @include fluid(margin-bottom, 15px, 30px);
+  transition: .38s ease-in-out;
+  &:hover{
+  background: $green;
+    color: #000;
+  }
+
+}
+.phone{
+  @include fluid(font-size,16px, 20px);
+  color: #fff;
+  font-weight: 600;
+  @include fluid(margin-bottom, 5px, 10px);
+}

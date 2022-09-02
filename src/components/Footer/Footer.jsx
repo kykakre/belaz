@@ -1,9 +1,45 @@
 import React from 'react';
-
-const Footer = () => {
+import style from "./Footer.module.scss"
+import logo from "../../assets/logo.svg"
+import {NavLink} from "react-router-dom";
+import arrow from "../../assets/arrow.svg"
+const Footer = (props) => {
     return (
-        <div>
-            
+        <div className={style.footer}>
+            <div className={style.container}>
+                <div className={style.item}>
+                    <img src={logo} className={style.logo}  />
+                    <div className={style.text}>620012, город Екатеринбург,
+                        улица Посадская, 16а,
+                        корпус И, помещение И-101</div>
+                    <div className={style.text}>ПН — ВТ: с 9:00 до 17:00</div>
+                </div>
+                <div className={style.item}>
+                    <div  className={style.title}>Каталог</div>
+                    <NavLink to="discount" className={style.link}>Скидки</NavLink>
+                    <NavLink to="special" className={style.link}>Спецпредложение</NavLink>
+                    <NavLink to="popular" className={style.link}>Популярное</NavLink>
+                    <NavLink to="actual" className={style.link}>Актуальные</NavLink>
+                    <NavLink to="recommend" className={style.link}>Мы рекомендуем</NavLink>
+                </div>
+                <div className={style.item}>
+                    <div  className={style.title}>Навигация</div>
+                    <NavLink to="catalog" className={style.link}>Каталог</NavLink>
+                    <NavLink to="news" className={style.link}>Новости</NavLink>
+                    <NavLink to="howToBuy" className={style.link}>Как купить</NavLink>
+                    <NavLink to="aboutCompany" className={style.link}>О компании</NavLink>
+                    <NavLink to="delivery" className={style.link}>Доставка и оплата</NavLink>
+                </div>
+                <img src={arrow} onClick={()=> window.scrollTo(0,0)} className={style.arrow}/>
+                <div className={style.itemLast}>
+                    <div className={style.linkPhone}>
+                        Заказать звонок
+                    </div>
+                    <div className={style.phone}>+7 (343) 287-57-32</div>
+                    <div className={style.text}>info@agregatekb.ru</div>
+                </div>
+            </div>
+
         </div>
     );
 };

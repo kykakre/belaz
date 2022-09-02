@@ -6,7 +6,9 @@
   margin: 0;
   padding: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 button {
   border: none;
 }
@@ -23,7 +25,11 @@ body {
   overflow-x: hidden;
   max-width: 100%;
 }
+.content{
+  min-height: 100vh;
+  @include container;
 
+}
 .ant-avatar {
   background: transparent;
   width: fit-content;
@@ -41,7 +47,7 @@ body {
   @include fluid(width, 8px, 9px);
   @include fluid(height, 8px, 9px);
   border: none;
-  background: #00ffc2;
+  background: $green;
   box-shadow: none;
   min-width: fit-content;
   display: flex;

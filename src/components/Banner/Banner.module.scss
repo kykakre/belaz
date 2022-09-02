@@ -1,0 +1,42 @@
+@import "../../style/Mixins.scss";
+
+.flexGreen{
+  background: #EBFFE6;
+  box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  @include fluid(height, 300px, 350px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @include fluid(padding-left, 45px, 90px);
+  @include fluid(padding-right, 45px, 90px);
+  @include fluid(margin-bottom, 30px, 60px);
+}
+.flexBlue{
+  background: #E6FFF9;
+  box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  @include fluid(height, 300px, 350px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @include fluid(padding-left, 45px, 90px);
+  @include fluid(padding-right, 45px, 90px);
+  @include fluid(margin-bottom, 30px, 60px);
+}
+.title{
+  @include fluid(font-size,36px, 48px);
+  font-weight: 700;
+  @include fluid(margin-bottom, 10px, 20px);
+}
+.subtitle{
+  @include fluid(font-size,18px, 24px);
+  font-weight: 500;
+}
+.bannerImg{
+  @include fluid(width, 300px, 400px);
+  height: 100%;
+  object-fit: contain;
+}

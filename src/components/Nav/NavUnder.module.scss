@@ -15,9 +15,9 @@ ul {
   font-weight: 500;
   transition: 0.38s ease-in-out;
   &:hover {
-    color: #00ffc2;
+    color: $green;
   }
 }
 .active {
-  color: #00ffc2;
+  color: $green;
 }
