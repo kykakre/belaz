@@ -12,15 +12,16 @@ import "antd/dist/antd.css";
 import "./style/Style.scss";
 import ActualContainer from "./views/ActualContainer.jsx";
 import RecommendContainer from "./views/RecommendContainer.jsx";
+import CategoryContainer from "./views/CategoryContainer.jsx";
 function App() {
   return (
     <BrowserRouter>
       <div className="app">
         <Header />
-          <div className="content">
             <Routes>
               <Route path="" element={<MainContainer />} />
               <Route path="catalog" element={<CatalogContainer />} />
+                <Route path="category" element={<CategoryContainer/>}/>
               <Route path="discount" element={<DiscountContainer />} />
               <Route path="special" element={<SpecialContainer />} />
               <Route path="popular" element={<ContactContainer />} />
@@ -29,7 +30,6 @@ function App() {
               <Route path="actual" element={<ActualContainer />} />
               <Route path="recommend" element={<RecommendContainer />} />
             </Routes>
-          </div>
 
         <Footer />
       </div>

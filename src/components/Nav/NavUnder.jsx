@@ -19,7 +19,7 @@ export default function NavUnder() {
           className={({ isActive }) =>
             isActive ? `${style.link} ${style.active}` : `${style.link} `
           }
-          to="discounts"
+          to="discount"
         >
           Скидки
         </NavLink>

@@ -1,0 +1,24 @@
+@import "../../style/Mixins.scss";
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+.link{
+  color: #606060;
+  @include fluid(font-size,11px, 12px);
+  font-weight: 500;
+  transition: .38s ease-in-out;
+  &:hover{
+    color: #000;
+  }
+
+}
+.paste{
+  @include fluid(font-size,11px, 12px);
+  color: #CDCDCD;
+  font-weight: 500;
+  @include fluid(margin-left, 2px, 3px);
+  @include fluid(margin-right, 2px, 3px);
+
+}

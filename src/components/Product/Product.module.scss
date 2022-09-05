@@ -10,8 +10,9 @@
   border-radius: 10px;
   @include fluid(padding-bottom, 10px, 15px);
   @include fluid(margin-bottom, 10px, 20px);
-  width: 18.1%;
-  margin-right: 2.3%;
+
+  @include fluid(width, 160px, 190px);
+  margin-left: 2.3%;
   &:nth-child(5n){
     margin-right: 0;
   }
@@ -93,4 +94,48 @@
   @include fluid(padding-right, 3px, 6px);
   @include fluid(padding-top, 3px, 6px);
   @include fluid(padding-bottom, 3px, 6px);
+}
+.sortFlex{
+  display: flex;
+  align-items: center;
+}
+.flexBetween{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.select{
+  @include fluid(width, 170px, 210px);
+  @include fluid(height, 20px, 40px);
+  margin-left: 10px !important;
+}
+.filter{
+  display: flex;
+  flex-direction: column;
+}
+.filterTop{
+  display: flex;
+  align-items: center;
+  background-color: $green;
+  @include fluid(padding-top, 10px, 13px);
+  @include fluid(padding-bottom, 10px, 13px);
+  @include fluid(padding-left, 13px, 15px);
+  @include fluid(padding-right, 13px, 15px);
+  justify-content: space-between;
+  border-radius: 5px 5px 0px 0px;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.filterText{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+}
+.filterIcon{
+  @include fluid(width, 14px, 16px);
+  @include fluid(height, 14px, 16px);
+  object-fit: contain;
+}
+.titleFilter{
+  @include fluid(font-size,14px, 16px);
+  font-weight: 600;
+  @include fluid(margin-bottom, 15px, 20px);
 }

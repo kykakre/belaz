@@ -69,3 +69,46 @@ body {
   align-items: center;
   justify-content: center;
 }
+.product{
+  display: flex;
+  justify-content: space-between;
+}
+.filter{
+  width: 18%;
+}
+.cards{
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ant-slider-track{
+  background-color: $green;
+}
+.ant-slider-handle {
+  border: solid 2px $green;
+}
+.ant-slider-handle .ant-tooltip-open {
+  border-color:$green;
+}
+.ant-slider-handle:focus{
+  border: solid 2px $green;
+}
+.ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open){
+  border-color: $green;
+}
+.ant-slider:hover .ant-slider-track{
+  background-color: $green;
+}
+.ant-checkbox-wrapper + .ant-checkbox-wrapper{
+  margin-left: 0;
+}
+.ant-checkbox-wrapper{
+ @include fluid(margin-top, 10px, 15px);
+}
+.ant-checkbox-checked .ant-checkbox-inner{
+  background-color: $green;
+  border-color: $green;
+}
+.ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + .ant-checkbox-inner{
+  border-color: $green;
+}

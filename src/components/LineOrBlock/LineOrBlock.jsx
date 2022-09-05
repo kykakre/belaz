@@ -2,7 +2,7 @@ import React from 'react';
 import style from "../Category/Category.module.scss"
 import stroke from "../../assets/stroke.svg"
 import bloke from "../../assets/bloke.svg"
-const CategorySort = (props) => {
+const LineOrBlock = (props) => {
     return (
         <div className={style.flex}>
             <img src={stroke} onClick={()=>props.setLine(true)} className={props.line? `${style.icon} `: `${style.icon} ${style.noActive}`}/>
@@ -11,4 +11,4 @@ const CategorySort = (props) => {
     );
 };
 
-export default CategorySort;
+export default LineOrBlock;

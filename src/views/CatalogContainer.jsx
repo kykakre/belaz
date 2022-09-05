@@ -4,6 +4,7 @@ let mapStateToProps = (state) => {
     return {
         product:state.productReducer.product,
         category:state.categoryReducer.category,
+        popular:state.popularReducer.popular,
     };
 };
 

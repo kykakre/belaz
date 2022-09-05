@@ -24,11 +24,11 @@ const Footer = (props) => {
                 </div>
                 <div className={style.item}>
                     <div  className={style.title}>Навигация</div>
-                    <NavLink to="catalog" className={style.link}>Каталог</NavLink>
-                    <NavLink to="news" className={style.link}>Новости</NavLink>
-                    <NavLink to="howToBuy" className={style.link}>Как купить</NavLink>
-                    <NavLink to="aboutCompany" className={style.link}>О компании</NavLink>
-                    <NavLink to="delivery" className={style.link}>Доставка и оплата</NavLink>
+                    <NavLink to="catalog" onClick={()=> window.scrollTo(0,0)} className={style.link}>Каталог</NavLink>
+                    <NavLink to="news" onClick={()=> window.scrollTo(0,0)} className={style.link}>Новости</NavLink>
+                    <NavLink to="howToBuy" onClick={()=> window.scrollTo(0,0)} className={style.link}>Как купить</NavLink>
+                    <NavLink to="aboutCompany" onClick={()=> window.scrollTo(0,0)} className={style.link}>О компании</NavLink>
+                    <NavLink to="delivery" onClick={()=> window.scrollTo(0,0)} className={style.link}>Доставка и оплата</NavLink>
                 </div>
                 <img src={arrow} onClick={()=> window.scrollTo(0,0)} className={style.arrow}/>
                 <div className={style.itemLast}>
