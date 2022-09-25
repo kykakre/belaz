@@ -1,0 +1,71 @@
+@import "../../style/Mixins.scss";
+
+.item{
+  @include fluid(margin-bottom, 30px, 60px);
+}
+.title{
+  @include fluid(font-size,16px, 20px);
+  color: #000;
+  font-weight: 700;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.inputName{
+  @include fluid(font-size,14px, 16px);
+  color:#000;
+  font-weight: 500;
+  @include fluid(margin-bottom, 5px, 10px);
+}
+.inputContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.input{
+  width: 48%;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.inputItem{
+  border: 2px solid #CCCCCC;
+  border-radius: 10px !important;
+  @include fluid(height, 30px, 60px);
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+  @include fluid(font-size,14px, 16px);
+  width: 100%;
+  &:focus{
+    border-color: #00FFC2 !important;
+    box-shadow: 0 0 0 2px rgba(0, 255, 192, 0.2) !important;
+    border-right-width: 1px;
+    outline: 0;
+  }
+  &:hover{
+    border-color: #00FFC2 !important;
+  }
+  &::placeholder{
+    color: #CCCCCC;
+  }
+}
+.inputFull{
+  width: 100%;
+  @include fluid(margin-bottom, 30px, 60px);
+}
+.btn{
+  @include fluid(font-size,14px, 16px);
+  color: #000;
+  transition: .38s ease-in-out;
+  @include fluid(padding-left, 60px, 130px);
+  @include fluid(padding-right, 60px, 130px);
+  background: #00FFC2;
+  border-radius: 10px;
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  &:hover{
+    background: #000;
+    color: #fff;
+  }
+}
