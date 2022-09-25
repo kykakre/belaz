@@ -46,6 +46,16 @@ const Nav = () => {
             Контакты
           </NavLink>
         </li>
+        <li>
+          <NavLink
+              className={({ isActive }) =>
+                  isActive ? `${style.link} ${style.active}` : `${style.link} `
+              }
+              to="lk"
+          >
+            Войти
+          </NavLink>
+        </li>
       </ul>
       <NavIcon />
     </div>

@@ -1,0 +1,15 @@
+@import "../../../style/Mixins.scss";
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.select{
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  min-width: 144px;
+  div{
+    border-color: #00FFC2 !important;
+  }
+}

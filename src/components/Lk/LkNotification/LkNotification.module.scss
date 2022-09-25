@@ -1,20 +1,5 @@
-@import "../../style/Mixins.scss";
-.title{
-  @include fluid(font-size,18px, 24px);
-  color: #000;
-  position: relative;
-  font-weight: 700;
-  @include fluid(margin-bottom, 35px, 70px);
-  &:before{
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    content: "";
-    background: #00FFC2;
-    @include fluid(width, 150px, 350px);
-    height: 3px;
-  }
-}
+@import "../../../style/Mixins";
+
 .subtitle{
   @include fluid(font-size,16px, 20px);
   font-weight: 700;

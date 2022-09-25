@@ -1,4 +1,4 @@
-@import "../../style/Mixins.scss";
+@import "../../../style/Mixins";
 
 .item{
   @include fluid(margin-bottom, 30px, 60px);

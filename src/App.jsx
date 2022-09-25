@@ -7,12 +7,12 @@ import NewsContainer from "./views/NewsContainer.jsx";
 import ContactContainer from "./views/ContactContainer.jsx";
 import SpecialContainer from "./views/SpecialContainer.jsx";
 import DiscountContainer from "./views/DiscountContainer.jsx";
-
-import "antd/dist/antd.css";
-import "./style/Style.scss";
 import ActualContainer from "./views/ActualContainer.jsx";
 import RecommendContainer from "./views/RecommendContainer.jsx";
 import CategoryContainer from "./views/CategoryContainer.jsx";
+import LkContainer from "./views/LkContainer.jsx";
+import "antd/dist/antd.css";
+import "./style/Style.scss";
 function App() {
   return (
     <BrowserRouter>
@@ -29,6 +29,10 @@ function App() {
               <Route path="contact" element={<ContactContainer />} />
               <Route path="actual" element={<ActualContainer />} />
               <Route path="recommend" element={<RecommendContainer />} />
+                <Route path="lk/*" element={<LkContainer />}/>
+
+
+
             </Routes>
 
         <Footer />

@@ -4,7 +4,7 @@ import style from "./LkNotification.module.scss"
 const LkNotification = (props) => {
     return (
         <div className="block">
-            <div className={style.title}>Уведомления</div>
+            <div className="title">Уведомления</div>
             <div className={style.item}>
                 <div className={style.subtitle}>Статус заказа</div>
                 <div className={style.switchItem}>
