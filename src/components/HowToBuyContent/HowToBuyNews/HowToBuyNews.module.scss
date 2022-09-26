@@ -1,0 +1,25 @@
+@import "../../../style/Mixins.scss";
+
+.card{
+  @include fluid(padding-top, 8px, 10px);
+  @include fluid(padding-bottom, 8px, 10px);
+  @include fluid(padding-left, 10px, 20px);
+}
+.data{
+  @include fluid(font-size,11px, 13px);
+  color: #CCCCCC;
+  font-weight: 500;
+  @include fluid(margin-bottom, 5px, 10px);
+}
+.leed{
+  @include fluid(font-size,11px, 13px);
+  line-height: 16px;
+  font-weight: 500;
+  color: #000000;
+  line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}

@@ -13,6 +13,7 @@ import CategoryContainer from "./views/CategoryContainer.jsx";
 import LkContainer from "./views/LkContainer.jsx";
 import "antd/dist/antd.css";
 import "./style/Style.scss";
+import HowToBuyContainer from "./views/HowToBuyContainer.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -29,6 +30,7 @@ function App() {
               <Route path="contact" element={<ContactContainer />} />
               <Route path="actual" element={<ActualContainer />} />
               <Route path="recommend" element={<RecommendContainer />} />
+                <Route path="howToBuy/*" element={<HowToBuyContainer/>}/>
                 <Route path="lk/*" element={<LkContainer />}/>
 
 
