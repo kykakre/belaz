@@ -19,12 +19,12 @@
     background: #00FFC2;
   }
   div{
-    height: 20px;
-    width: 20px;
-    box-shadow: 0 0 0 2px rgba(0, 255, 192, 0.2) !important;
+    height: 19px;
+    width: 19px;
   }
 }
 .text{
+  @include fluid(margin-left, 15px, 25px);
   @include fluid(font-size,14px, 16px);
   font-weight: 500;
   color: #000000;

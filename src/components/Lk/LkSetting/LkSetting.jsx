@@ -22,7 +22,7 @@ const LkSetting = () => {
                     <Input placeholder="Если есть" className={style.inputItem}/>
                 </div>
                 <div className={style.input}>
-                    <div className={style.inputName}>Имя</div>
+                    <div className={style.inputName}>Дата рождения</div>
                     <ConfigProvider locale={locale}>
                         <DatePicker className={style.inputItem} defaultValue={moment('01-01-2022', 'DD-MM-YYYY')} />
                     </ConfigProvider>

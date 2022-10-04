@@ -4,16 +4,16 @@ import style from "./NavUnder.module.scss";
 export default function NavUnder() {
   return (
     <ul>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? `${style.link} ${style.active}` : `${style.link} `
-          }
-          to="services"
-        >
-          Услуги
-        </NavLink>
-      </li>
+      {/*<li>*/}
+      {/*  <NavLink*/}
+      {/*    className={({ isActive }) =>*/}
+      {/*      isActive ? `${style.link} ${style.active}` : `${style.link} `*/}
+      {/*    }*/}
+      {/*    to="services"*/}
+      {/*  >*/}
+      {/*    Услуги*/}
+      {/*  </NavLink>*/}
+      {/*</li>*/}
       <li>
         <NavLink
           className={({ isActive }) =>
@@ -24,16 +24,16 @@ export default function NavUnder() {
           Скидки
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? `${style.link} ${style.active}` : `${style.link} `
-          }
-          to="specialOffers"
-        >
-          Спецпредложения
-        </NavLink>
-      </li>
+      {/*<li>*/}
+      {/*  <NavLink*/}
+      {/*    className={({ isActive }) =>*/}
+      {/*      isActive ? `${style.link} ${style.active}` : `${style.link} `*/}
+      {/*    }*/}
+      {/*    to="specialOffers"*/}
+      {/*  >*/}
+      {/*    Спецпредложения*/}
+      {/*  </NavLink>*/}
+      {/*</li>*/}
       <li>
         <NavLink
           className={({ isActive }) =>

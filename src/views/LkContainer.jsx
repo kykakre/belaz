@@ -4,7 +4,6 @@ import Lk from "./Lk.jsx";
 let mapStateToProps = (state) => {
     return {
         personInfo:state.personInfoReducer.personInfo,
-
     };
 };
 

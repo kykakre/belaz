@@ -1,0 +1,24 @@
+@import "../../../style/Mixins.scss";
+
+.item{
+  @include fluid(margin-bottom, 15px, 20px);
+  border-bottom: 1px solid #ccc;
+}
+.pageTitle{
+  @include fluid(font-size,18px, 20px);
+  font-weight: 700;
+  color: #000;
+  @include fluid(margin-bottom, 20px, 35px);
+}
+p{
+  @include fluid(font-size,12px, 14px);
+  color: #000;
+  font-weight: 500;
+  @include fluid(margin-bottom, 10px, 20px);
+}
+h1{
+  @include fluid(font-size,14px, 16px);
+  @include fluid(margin-bottom, 15px, 20px);
+  color: #000;
+  font-weight: 700;
+}

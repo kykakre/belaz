@@ -1,0 +1,59 @@
+@import "../../style/Mixins.scss";
+
+.bunner{
+  background: url("../../assets/bunnerBackground.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  @include fluid(height, 650px, 777px);
+  background-size: cover;
+}
+.bunnerContent{
+  @include container;
+  @include fluid(padding-top, 100px, 170px);
+}
+.title{
+  @include fluid(font-size,48px, 64px);
+  font-weight: 700;
+  line-height: 78px;
+}
+.subtitle{
+  @include fluid(font-size,24px, 32px);
+  font-weight: 500;
+  @include fluid(margin-bottom, 25px, 50px);
+}
+.text{
+  @include fluid(font-size,16px, 20px);
+  font-weight: 500;
+  width: 70%;
+  @include fluid(margin-bottom, 25px, 50px);
+}
+.link{
+  border: 1px solid transparent;
+  background: #00FFC2;
+  border-radius: 5px;
+  color: #000;
+  @include fluid(padding-left, 30px, 65px);
+  @include fluid(padding-right, 30px, 65px);
+  @include fluid(padding-top, 15px, 20px);
+  @include fluid(padding-bottom, 15px, 20px);
+  display: flex;
+  align-items: center;
+  @include fluid(font-size,16px, 20px);
+  font-weight: 500;
+  width: fit-content;
+  transition: .38s ease-in-out;
+  &:hover{
+    background: #fff;
+    color: #000;
+    border: 1px solid #00FFC2;
+  }
+}
+.arrow{
+  background: url("../../assets/arrowBanner.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include fluid(width, 20px, 30px);
+  @include fluid(height, 19px, 24px);
+  @include fluid(margin-left, 10px, 15px);
+}

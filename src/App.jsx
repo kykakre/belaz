@@ -14,6 +14,7 @@ import LkContainer from "./views/LkContainer.jsx";
 import "antd/dist/antd.css";
 import "./style/Style.scss";
 import HowToBuyContainer from "./views/HowToBuyContainer.jsx";
+import PopularContainer from "./views/PopularContainer.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -25,7 +26,7 @@ function App() {
                 <Route path="category" element={<CategoryContainer/>}/>
               <Route path="discount" element={<DiscountContainer />} />
               <Route path="special" element={<SpecialContainer />} />
-              <Route path="popular" element={<ContactContainer />} />
+              <Route path="popular" element={<PopularContainer />} />
               <Route path="news" element={<NewsContainer />} />
               <Route path="contact" element={<ContactContainer />} />
               <Route path="actual" element={<ActualContainer />} />

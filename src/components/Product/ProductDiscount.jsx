@@ -5,6 +5,7 @@ import LineOrBlock from "../LineOrBlock/LineOrBlock.jsx";
 import ProductSelectSort from "./ProductSelectSort.jsx";
 import ProductItem from "./ProductItem.jsx";
 import ProductFilter from "./ProductFilter.jsx";
+import TitleDiscount from "../Title/TitleDiscount.jsx";
 
 const ProductDiscount = (props) => {
     const [line,setLine] = useState(false)
@@ -14,7 +15,7 @@ const ProductDiscount = (props) => {
     return (
         <>
             <div className={style.flexBetween}>
-            <Title arrow={false} title={"Скидки и акции"} link="/discount"/>
+            <TitleDiscount/>
             <div className={style.sortFlex}>
                 <ProductSelectSort/>
                 <LineOrBlock line={line} setLine={setLine}/>

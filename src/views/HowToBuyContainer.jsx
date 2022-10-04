@@ -4,6 +4,8 @@ import HowToBuy from "./HowToBuy.jsx";
 let mapStateToProps = (state) => {
     return {
         news:state.newsReducer.news,
+        helps:state.helpReducer.helps,
+
 
     };
 };

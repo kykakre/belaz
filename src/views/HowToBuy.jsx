@@ -8,7 +8,7 @@ const HowToBuy = (props) => {
         <div className="content">
             <Search/>
             <BreadcrumbHowToBuy/>
-            <HowToBuyContent news={props.news}/>
+            <HowToBuyContent helps={props.helps} news={props.news}/>
         </div>
     );
 };

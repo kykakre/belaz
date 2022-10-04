@@ -5,16 +5,16 @@ import style from "./HowToBuyContent.module.scss";
 const HowToBuyContentNav = () => {
     return (
         <div className={style.flexNav}>
-            <NavLink to="payment" className={({ isActive }) =>
+            <NavLink to="payment" onClick={()=> window.scrollTo(0,0)} className={({ isActive }) =>
                 isActive ? `${style.linkContent} ${style.activeContent}` : `${style.linkContent} `
             } >Условия оплаты</NavLink>
-            <NavLink to="delivery" className={({ isActive }) =>
+            <NavLink to="delivery" onClick={()=> window.scrollTo(0,0)} className={({ isActive }) =>
                 isActive ? `${style.linkContent} ${style.activeContent}` : `${style.linkContent} `
             }>Условия доставки</NavLink>
-            <NavLink to="guarantee" className={({ isActive }) =>
+            <NavLink to="guarantee" onClick={()=> window.scrollTo(0,0)} className={({ isActive }) =>
                 isActive ? `${style.linkContent} ${style.activeContent}` : `${style.linkContent} `
             }>Гарантии на товар</NavLink>
-            <NavLink to="" className={({ isActive }) =>
+            <NavLink to="" onClick={()=> window.scrollTo(0,0)} className={({ isActive }) =>
                 isActive ? `${style.navLink} ${style.navLink}` : `${style.navLink} `
             }>Главная</NavLink>
 

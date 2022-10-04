@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   @include fluid(margin-top, 7px, 10px);
+  @include fluid(margin-bottom, 55px, 150px);
 
 }
 .nav{
@@ -69,6 +70,7 @@
 .linkContent{
   @include fluid(font-size,12px, 14px);
   @include fluid(width, 150px, 200px);
+  border: 1px solid transparent;
   color: #000;
   text-align: center;
   @include fluid(margin-right, 10px, 15px);
@@ -76,10 +78,19 @@
   border-radius: 5px;
 @include fluid(padding-top, 8px, 12px);
 @include fluid(padding-bottom, 8px, 12px);
+  transition: .38s ease-in-out;
+  &:hover{
+    color: #00FFC2;
+    background: #fff;
+    border: 1px solid #000;
+  }
 }
 .activeContent{
   background: #333;
   color: #fff !important;
+  &:hover{
+    background: #333;
+  }
 }
 .navLink{
   text-align: center;

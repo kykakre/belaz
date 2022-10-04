@@ -1,9 +1,14 @@
 import React from 'react';
+import Search from "../components/Search/Search.jsx";
+import BreadcrumbDiscount from "../components/Breadcrumb/BreadcrumbDiscount.jsx";
+import ProductPopular from "../components/Product/ProductPopular.jsx";
 
-const Popular = () => {
+const Popular = (props) => {
     return (
-        <div>
-            
+        <div className="content">
+            <Search/>
+            <ProductPopular product={props.product}/>
+
         </div>
     );
 };

@@ -14,6 +14,9 @@ button {
 }
 a {
   text-decoration: none;
+  &:hover{
+    color:#00FFC2;
+  }
 }
 body {
   font-family: "Montserrat", sans-serif;

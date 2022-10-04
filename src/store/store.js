@@ -6,6 +6,7 @@ import categoryReducer from "./slice/categorySlice.js";
 import popularReducer from "./slice/popularSlice.js";
 import personInfoReducer from "./slice/personInfoSlice.js";
 import newsReducer from "./slice/newsSlice.js";
+import helpReducer from "./slice/helpSlice.js"
 const rootReducer = combineReducers({
     productReducer,
     mainReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
     popularReducer,
     personInfoReducer,
     newsReducer,
+    helpReducer,
 
 });
 
