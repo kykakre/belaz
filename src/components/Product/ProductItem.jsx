@@ -15,7 +15,7 @@ const ProductItem = (props) => {
             <div className={style.title}>{props.title}</div>
             <div className={style.flex}>
                 <img src={star} className={style.star} alt="grabe"/>
-                <div className={style.grabe}>{props.grabe} ({props.totalGrabe} оценок)</div>
+                <div>{props.grabe} ({props.totalGrabe} оценок)</div>
             </div>
             <div className={style.spaceBetween}>
                 <div className={style.price}>{props.price} ₽</div>

@@ -139,3 +139,105 @@
   font-weight: 600;
   @include fluid(margin-bottom, 15px, 20px);
 }
+
+.lineFlex{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  @include fluid(margin-bottom, 10px, 20px);
+}
+.lineImg{
+  @include fluid(width, 150px, 255px);
+  @include fluid(height, 135px, 215px);
+  object-position: center;
+  background: #ECECEC;
+  object-fit: contain;
+  border-radius: 10px  0 0 10px;
+
+}
+.lineContain{
+  position: relative;
+  @include fluid(margin-right, 15px, 30px);
+}
+.lineTitle{
+  @include fluid(font-size,12px, 14px);
+  color: #000;
+  font-weight: 500;
+  @include fluid(margin-bottom, 3px, 5px);
+}
+.grabe{
+  display: flex;
+  align-items: center;
+  @include fluid(font-size,10px, 12px);
+  color: #858585;
+  font-weight: 500;
+  @include fluid(margin-bottom, 15px, 17px);
+}
+.lineStar{
+  @include fluid(width, 10px, 14px);
+  @include fluid(height, 10px, 14px);
+  object-fit: contain;
+  @include fluid(margin-right, 4px, 5px);
+}
+.description{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+  color: #838383;
+  @include fluid(margin-bottom, 15px, 20px);
+}
+.lineSell{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.lineValue{
+@include fluid(font-size,14px, 16px);
+  color: #000;
+  font-weight: 600;
+
+}
+.lineFavorite{
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  @include fluid(height, 25px, 35px);
+  @include fluid(width, 35px, 45px);
+  @include fluid(padding-left, 10px, 15px);
+  @include fluid(padding-right, 10px, 15px);
+  @include fluid(padding-top, 7px, 10px);
+  @include fluid(padding-bottom, 7px, 10px);
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+justify-content: center;
+  @include fluid(margin-right, 7px, 10px);
+  transition: .38s ease-in-out;
+  &:hover{
+    border: 1px solid #00FFC2;
+  }
+}
+.lineBuy{
+  cursor: pointer;
+  @include fluid(padding-left, 10px, 20px);
+  @include fluid(padding-right, 10px, 20px);
+ @include fluid(height, 25px, 35px);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  transition: .38s ease-in-out;
+  &:hover{
+    border: 1px solid #00FFC2;
+  }
+}
+.lineBuyText{
+  @include fluid(font-size,12px, 14px);
+  color: #000;
+  font-weight: 500;
+  @include fluid(margin-right, 7px, 10px);
+}
+.lineBuyIcon{
+  @include fluid(width, 15px, 18px);
+  @include fluid(height, 15px, 18px);
+  object-fit: contain;
+  object-position: center;
+}

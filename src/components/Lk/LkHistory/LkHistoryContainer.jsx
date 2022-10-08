@@ -3,6 +3,7 @@ import LkHistory from "./LkHistory.jsx";
 let mapStateToProps = (state) => {
     return {
         popular:state.popularReducer.popular,
+        product:state.productReducer.product,
     };
 };
 

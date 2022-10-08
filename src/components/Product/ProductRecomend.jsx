@@ -7,11 +7,15 @@ import ProductSelectSort from "./ProductSelectSort.jsx";
 import LineOrBlock from "../LineOrBlock/LineOrBlock.jsx";
 import ProductFilter from "./ProductFilter.jsx";
 import TitleRecomend from "../Title/TitleRecomend.jsx";
+import ProductItemLine from "./ProductItemLine.jsx";
 
 const ProductRecomend = (props) => {
     const [line,setLine] = useState(false)
     let item = props.product.map((e)=>(
         <ProductItem id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price}/>
+    ))
+    let itemLine = props.product.map((e)=>(
+        <ProductItemLine id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price} description={e.description} />
     ))
     return (
         <>
@@ -27,7 +31,7 @@ const ProductRecomend = (props) => {
                     <ProductFilter/>
                 </div>
                 <div className="cards">
-                    {item}
+                    {line?itemLine:item}
                 </div>
             </div>
 

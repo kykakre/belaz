@@ -13,3 +13,31 @@
     border-color: #00FFC2 !important;
   }
 }
+.title{
+  @include fluid(font-size,18px, 24px);
+  color: #000;
+  position: relative;
+  font-weight: 700;
+  &:before{
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    content: "";
+    background: #00FFC2;
+    @include fluid(width, 150px, 350px);
+    height: 3px;
+  }
+}
+.card{
+  @include fluid(margin-top, 25px, 50px);
+}
+.cardFavorite{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  @include fluid(margin-top, 25px, 50px);
+}
+.flexSort{
+  display: flex;
+  align-items: center;
+}

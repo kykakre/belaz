@@ -1,9 +1,14 @@
 import React from 'react';
+import Search from "../components/Search/Search.jsx";
+import BreadcrumbNews from "../components/Breadcrumb/BreadcrumbNews.jsx";
+import NewsContent from "../components/NewsContent/NewsContent.jsx";
 
-const News = () => {
+const News = (props) => {
     return (
-        <div>
-                Новости
+        <div className="content">
+            <Search/>
+            <BreadcrumbNews/>
+            <NewsContent news={props.news}/>
         </div>
     );
 };

@@ -1,0 +1,43 @@
+@import "../../style/Mixins.scss";
+
+.block{
+  @include  fluid(padding,15px,30px);
+  background: #FBFBFB;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.img{
+  @include fluid(width, 100px, 155px);
+  @include fluid(height, 100px, 155px);
+  object-fit: contain;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.text{
+  @include fluid(font-size,12px, 14px);
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.link{
+  width: 100%;
+  text-align: center;
+  @include fluid(padding-top, 15px, 20px);
+  @include fluid(padding-bottom, 15px, 20px);
+  transition: .38s ease-in-out;
+  background: #00FFC2;
+  border-radius: 5px;
+  border: 1px solid #00FFC2;
+  color: #000;
+  @include fluid(font-size,14px, 16px);
+  font-weight: 500;
+  display: block;
+  @include fluid(margin-bottom, 7px, 10px);
+  &:hover{
+    background: transparent;
+    color: #00FFC2;
+  }
+}

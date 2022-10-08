@@ -1,0 +1,145 @@
+@import "../../style/Mixins.scss";
+.flex{
+  display: flex;
+  justify-content: space-between;
+  @include fluid(margin-top, 15px, 30px);
+}
+.container{
+  @include fluid(margin-bottom, 30px, 50px);
+}
+.sidebar{
+  width: 30%;
+}
+.content{
+  width: 68%;
+}
+.newsTitle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title{
+  @include fluid(font-size,22px, 28px);
+  font-weight: 700;
+}
+.tabs{
+  display: flex;
+  align-items: center;
+  
+}
+.tab{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  cursor: pointer;
+  @include fluid(height, 35px, 40px);
+  @include fluid(padding-left, 10px, 15px);
+  @include fluid(padding-right, 10px, 15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include fluid(margin-right, 7px, 10px);
+  outline: none;
+
+}
+.tabActive{
+  color: #00FFC2;
+  border: 1px solid #00FFC2;
+}
+.tabIcon{
+ outline: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  cursor: pointer;
+  @include fluid(padding-left, 10px, 15px);
+  @include fluid(padding-right, 10px, 15px);
+ @include fluid(height, 35px, 40px);
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+justify-content: center;
+  img{
+    background: url("../../assets/newsIcon.svg");
+    @include fluid(width, 12px, 15px);
+    @include fluid(height, 12px, 15px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.card{
+  display: flex;
+  background: #FBFBFB;
+  border-radius: 10px;
+  @include fluid(padding,10px,20px);
+  @include fluid(margin-bottom, 15px, 20px);
+}
+.img{
+  @include fluid(height, 120px, 240px);
+  @include fluid(width, 150px, 275px);
+  object-fit: cover;
+  border-radius: 5px;
+  object-position: center;
+  @include fluid(margin-right, 15px, 20px);
+}
+.titleNews{
+  @include fluid(font-size,14px, 16px);
+  line-height: 140%;
+  font-weight: 700;
+  @include fluid(margin-bottom, 7px, 10px);
+}
+.date{
+  @include fluid(font-size,10px, 12px);
+  color: #ccc;
+  font-weight: 500;
+  @include fluid(margin-bottom, 7px, 10px);
+}
+.leed{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+  line-height: 140%;
+  @include fluid(margin-bottom, 15px, 20px);
+}
+.moreFlex{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.share{
+  @include fluid(height, 30px, 35px);
+  @include fluid(padding-left, 7px, 10px);
+  @include fluid(padding-right, 7px, 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  @include fluid(margin-right, 7px, 10px);
+  cursor: pointer;
+  img{
+    @include fluid(height, 14px, 15px);
+    @include fluid(width, 14px, 15px);
+    object-position: center;
+    object-fit: contain;
+  }
+}
+.more{
+  cursor: pointer;
+  @include fluid(height, 30px, 35px);
+  @include fluid(font-size,12px, 13px);
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  @include fluid(padding-left, 15px, 20px);
+  @include fluid(padding-right, 15px, 20px);
+  font-weight: 500;
+  color: #333;
+  transition: .38s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover{
+    color: #00FFC2;
+    border: 1px solid #00FFC2;
+  }
+}

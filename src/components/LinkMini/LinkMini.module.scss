@@ -1,0 +1,34 @@
+@import "../../style/Mixins.scss";
+
+.block{
+  @include fluid(padding,15px,30px);
+  background: #FBFBFB;
+  border-radius: 10px;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include fluid(padding-left, 5px, 10px);
+  @include fluid(padding-right, 5px, 10px);
+  @include fluid(padding-top, 5px, 10px);
+  @include fluid(padding-bottom, 5px, 10px);
+  border-bottom: 1px solid #CCCCCC;
+  @include fluid(margin-bottom, 15px, 20px);
+  transition: .38s ease-in-out;
+  &:hover{
+    border-bottom: 1px solid #00FFC2;
+  }
+}
+.text{
+  @include fluid(font-size,12px, 14px);
+  color:#333;
+  letter-spacing: 0.05em;
+
+}
+.icon{
+  @include fluid(width, 15px, 20px);
+  @include fluid(height, 7px, 10px);
+  object-fit: contain;
+}

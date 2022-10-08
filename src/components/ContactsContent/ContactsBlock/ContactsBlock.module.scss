@@ -1,0 +1,145 @@
+@import "../../../style/Mixins.scss";
+
+.block{
+  background: #FBFBFB;
+  border-radius: 10px;
+  @include fluid(padding,15px,30px);
+  @include fluid(margin-bottom, 15px, 30px);
+  p{
+    @include fluid(font-size,12px, 14px);
+    color: #000;
+    line-height: 143.9%;
+  }
+}
+.item{
+  @include fluid(margin-bottom, 15px, 30px);
+  display: flex;
+  align-items: center;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.icon{
+  @include fluid(width, 15px, 30px);
+  @include fluid(height, 15px, 30px);
+  object-fit: contain;
+  @include fluid(margin-right, 15px, 30px);
+}
+.title{
+  @include fluid(font-size,14px, 16px);
+  font-weight: 700;
+  @include fluid(margin-bottom, 4px, 5px);
+}
+.text{
+  @include fluid(font-size,12px, 14px);
+  color:#333;
+  width: 500px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+}
+.formTitle{
+  @include fluid(font-size,14px, 16px);
+  color: #000;
+  font-weight: 700;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.input{
+  @include fluid(width, 200px, 350px);
+  background: transparent;
+  outline: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  @include fluid(padding-top, 7px, 12px);
+  @include fluid(padding-bottom, 7px, 12px);
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(font-size,12px, 14px);
+  color: #000;
+  @include fluid(margin-bottom, 10px, 20px);
+  &::placeholder{
+    color: #ccc;
+  }
+}
+.textarea{
+  outline: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  resize: none;
+  @include fluid(padding-top, 10px, 12px);
+  @include fluid(padding-left, 15px, 25px);
+  @include fluid(height, 160px, 180px);
+@include fluid(margin-bottom, 10px, 20px);
+  z-index: 4;
+  background: #FBFBFB;
+  &::placeholder{
+    color: #ccc;
+  }
+}
+.checkbox{
+  display: flex;
+  align-items: center;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.checkboxItem{
+  margin-top: 0;
+}
+.checkboxText{
+  @include fluid(font-size,12px, 14px);
+  color: #888;
+  @include fluid(margin-left, 12px, 20px);
+  a{
+    text-decoration-line: underline;
+
+    color: #000000;
+  }
+}
+.button{
+  display: flex;
+  align-items: center;
+}
+.btn{
+  cursor: pointer;
+
+  @include fluid(font-size,12px, 14px);
+  background: #00FFC2;
+  border: 1px solid #00FFC2;
+  @include fluid(padding-left, 25px, 50px);
+  @include fluid(padding-right, 25px, 50px);
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  @include fluid(margin-right, 7px, 10px);
+  transition: .38s ease-in-out;
+  border-radius: 5px;
+  &:hover{
+    background: transparent;
+    color: #00FFC2;
+  }
+}
+.btnClear{
+  cursor: pointer;
+  border-radius: 5px;
+  @include fluid(font-size,12px, 14px);
+  background: transparent;
+  border: 1px solid #00FFC2;
+  @include fluid(padding-left, 25px, 50px);
+  @include fluid(padding-right, 25px, 50px);
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  @include fluid(margin-right, 7px, 10px);
+  color: #00FFC2;
+
+  transition: .38s ease-in-out;
+
+}
+.gear{
+  position: absolute;
+  @include fluid(width, 150px, 200px);
+  @include fluid(height, 200px, 300px);
+  right: 0;
+  top: 0;
+  z-index: 1;
+}

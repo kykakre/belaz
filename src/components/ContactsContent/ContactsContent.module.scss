@@ -1,0 +1,14 @@
+@import "../../style/Mixins.scss";
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  @include fluid(margin-top, 15px, 30px);
+}
+
+.sidebar{
+  width: 30%;
+}
+.content{
+  width: 68%;
+}
