@@ -7,6 +7,7 @@ import popularReducer from "./slice/popularSlice.js";
 import personInfoReducer from "./slice/personInfoSlice.js";
 import newsReducer from "./slice/newsSlice.js";
 import helpReducer from "./slice/helpSlice.js"
+import orderReducer from "./slice/orderSlice.js"
 import contactReducer from "./slice/contactSlice.js";
 const rootReducer = combineReducers({
     productReducer,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
     newsReducer,
     helpReducer,
     contactReducer,
+    orderReducer,
 
 });
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import style from "./NewsContent.module.scss"
 import share from "../../assets/share.svg"
+import {NavLink} from "react-router-dom";
 const NewsContentItem = (props) => {
     return (
         <div className={style.card}>
@@ -13,7 +14,7 @@ const NewsContentItem = (props) => {
                     <div className={style.share}>
                         <img src={share}  alt="share"/>
                     </div>
-                    <div className={style.more}>Читать далее</div>
+                    <NavLink to={'/news/' + props.id} className={style.more}> Читать далее</NavLink>
                 </div>
             </div>
         </div>

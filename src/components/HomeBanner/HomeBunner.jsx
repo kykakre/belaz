@@ -9,7 +9,7 @@ const HomeBunner = (props) => {
                 <div className={style.subtitle}>Запчасти для грузовиков и спецтехники</div>
                 <div className={style.text}>«АгрегатЕКБ» — Интернет-магазин запчастей для легковых автомобилей, грузовиков и спецтехники. Компания
                     в настоящее время специализируется на оптовой продаже запасных частей к сельскохозяйственной, дорожной, строительной технике, легковым и грузовым автомобилям</div>
-                <NavLink to="" className={style.link}>Каталог<div className={style.arrow}/> </NavLink>
+                <NavLink to="/catalog" className={style.link}>Каталог<div className={style.arrow}/> </NavLink>
 
             </div>
 

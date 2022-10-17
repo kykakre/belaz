@@ -1,0 +1,61 @@
+@import "../../style/Mixins.scss";
+
+.container{
+  @include fluid(margin-bottom, 25px, 50px);
+}
+.bunner{
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+  @include fluid(padding-left, 10px, 20px);
+  @include fluid(padding-right, 10px, 20px);
+  @include fluid(margin-bottom, 15px, 30px);
+  z-index: 1;
+}
+.bannerImg{
+  content: "";
+  width: 100%;
+  left: 0;
+  top: 0 ;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 5px;
+  z-index: -1;
+
+}
+.bannerTitle{
+  @include fluid(font-size,24px, 38px);
+  color: #fff;
+  font-weight: 700;
+  @include fluid(padding-top, 70px, 150px);
+  @include fluid(margin-bottom, 5px, 10px);
+  
+}
+.bannerdate{
+  @include fluid(font-size,14px, 16px);
+  letter-spacing: 0.05em;
+  color: #ccc;
+  @include fluid(padding-bottom, 15px, 30px);
+  line-height: 140%;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+.text{
+  background: #FBFBFB;
+  border-radius: 10px;
+  width: 68%;
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(padding-top, 15px, 30px);
+  @include fluid(padding-bottom, 15px, 30px);
+  @include fluid(font-size,16px, 18px);
+  height: fit-content;
+}
+.sidebar{
+  width: 30%;
+}

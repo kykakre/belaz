@@ -27,6 +27,14 @@ const LkBlockOrder = (props) => {
                 className={({ isActive }) =>
                     isActive ? `${style.link} ${style.active}` : `${style.link} `
                 }
+                to="order/"
+            >
+                Мои заказы
+            </NavLink>
+            <NavLink
+                className={({ isActive }) =>
+                    isActive ? `${style.link} ${style.active}` : `${style.link} `
+                }
                 to="history/"
             >
                 История просмотров

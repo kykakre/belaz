@@ -7,7 +7,7 @@ const Main = (props) => {
   return (
     <div>
         <HomeBunner/>
-      <Benefits benefits={props.benefits} />
+        <Benefits benefits={props.benefits} />
         <NewsForm/>
     </div>
   );

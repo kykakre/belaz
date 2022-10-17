@@ -11,7 +11,7 @@ const LkBlockOther = (props) => {
                 className={({ isActive }) =>
                     isActive ? `${style.link} ${style.active}` : `${style.link} `
                 }
-                to="payment/"
+                to="/howToBuy/payment"
             >
                 Условия оплаты
             </NavLink>
@@ -19,7 +19,7 @@ const LkBlockOther = (props) => {
                 className={({ isActive }) =>
                     isActive ? `${style.link} ${style.active}` : `${style.link} `
                 }
-                to="delivery/"
+                to="/howToBuy/delivery/"
             >
                 Условия доставки
             </NavLink>
@@ -27,7 +27,7 @@ const LkBlockOther = (props) => {
                 className={({ isActive }) =>
                     isActive ? `${style.link} ${style.active}` : `${style.link} `
                 }
-                to="guarantee/"
+                to="/howToBuy/guarantee/"
             >
                 Гарантия на товар
             </NavLink>
