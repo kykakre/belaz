@@ -18,7 +18,8 @@
     "react-tabs": "^5.1.0",
     "redux": "^4.2.0",
     "sass": "^1.54.4",
-    "sass-loader": "^13.0.2"
+    "sass-loader": "^13.0.2",
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

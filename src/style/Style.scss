@@ -18,6 +18,9 @@ a {
     color:#00FFC2;
   }
 }
+input{
+  font-family: "Montserrat", sans-serif;
+}
 body {
   font-family: "Montserrat", sans-serif;
   background: #ffffff;
@@ -123,7 +126,7 @@ body {
   @include fluid(margin-bottom, 50px, 110px);
 }
 .block{
-  width: 72%;
+  width: 75%;
 }
 .title{
   @include fluid(font-size,18px, 24px);
@@ -140,4 +143,15 @@ body {
     @include fluid(width, 150px, 350px);
     height: 3px;
   }
+}
+.next{
+  @include fluid(height, 195px, 240px);
+  @include fluid(padding-left, 15px, 20px);
+  @include fluid(padding-right, 15px, 20px);
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

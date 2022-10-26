@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 export default function Icon(props) {
   return (
     <>
-      <NavLink to="favorite" className={style.iconItem}>
+      <NavLink to="lk/favorite" className={style.iconItem}>
         <Badge count={0}>
           <Avatar shape="square" icon={<Favorite />} />
         </Badge>

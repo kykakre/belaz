@@ -1,0 +1,44 @@
+@import "../../style/Mixins.scss";
+
+.block{
+@include fluid(margin-top, 25px, 50px);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E2E2E2;
+  @include fluid(padding, 15px, 30px);
+  box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+.title{
+@include fluid(font-size,16px, 20px);
+  font-weight: 700;
+    color:#000000;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.input{
+  border: 2px solid #00FFC2;
+  border-radius: 10px;
+  @include fluid(font-size,14px, 16px);
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(margin-bottom, 15px, 25px);
+  outline: none;
+  &::placeholder{
+    color: #CCCCCC;
+  }
+
+}
+.btn{
+  background: #CCCCCC;
+  border-radius: 10px;
+  color: #000;
+  font-weight: 700;
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  transition: .38s ease-in-out;
+}
+.btnActive{
+  background: #00FFC2;
+}

@@ -11,7 +11,7 @@
   @include fluid(padding-bottom, 10px, 15px);
   @include fluid(margin-bottom, 10px, 20px);
 
-  @include fluid(width, 160px, 190px);
+  @include fluid(width, 160px, 185px);
   margin-left: 1.54%;
   &:nth-child(5n){
     margin-right: 0;

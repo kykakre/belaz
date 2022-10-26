@@ -42,10 +42,10 @@ const initialState = {
     error: "",
 };
 
-export const slideSlice = createSlice({
+export const swiperSlice = createSlice({
     name: "slide",
     initialState,
     reducers: {},
 });
 
-export default slideSlice.reducer;
+export default swiperSlice.reducer;

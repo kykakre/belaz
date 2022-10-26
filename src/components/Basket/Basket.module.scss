@@ -1,0 +1,120 @@
+@import "../../style/Mixins.scss";
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  @include fluid(margin-bottom, 50px, 100px);
+}
+.block{
+  width: 70%;
+}
+.sidebar{
+  width: 28%;
+}
+.flexBlock{
+  display: flex;
+  background: #FBFBFB;
+  border-radius: 10px;
+  align-items: center;
+  @include fluid(padding-left, 10px,20px);
+  @include fluid(padding-bottom, 7px, 12px);
+  @include fluid(margin-bottom, 7px, 10px);
+}
+.delete{
+  color: red;
+  @include fluid(margin-top, 7px, 15px);
+
+  @include fluid(font-size,12px, 14px);
+  @include fluid(margin-left, 15px, 30px);
+
+}
+.card{
+  display: flex;
+  align-items: center;
+  background: #FBFBFB;
+  border-radius: 10px;
+  @include fluid(padding-left, 10px, 20px);
+  @include fluid(margin-bottom, 7px, 10px);
+  @include fluid(padding-right, 20px, 35px);
+}
+.img{
+  @include fluid(width, 170px, 230px);
+  @include fluid(height, 170px, 215px);
+  background: #ECECEC;
+  object-fit: contain;
+  object-position: center;
+  @include fluid(margin-left, 10px, 20px);
+  @include fluid(margin-right, 30px, 65px);
+}
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.info{
+  @include fluid(height, 150px, 185px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.productName{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+  @include fluid(margin-bottom, 7px, 10px);
+}
+.item{
+  width: 58%;
+}
+.star{
+  @include fluid(width, 10px, 14px);
+  @include fluid(height, 10px, 14px);
+  object-fit: contain;
+  margin-right: 5px;
+}
+.grabe{
+  display: flex;
+  align-items: center;
+  @include fluid(font-size,10px, 12px);
+  color: #858585;
+}
+
+.settingText{
+  @include fluid(font-size,12px, 14px);
+  color: #000;
+  font-weight: 400;
+  cursor: pointer;
+  transition: .38s ease-in-out;
+  @include fluid(margin-bottom, 7px, 10px);
+  &:last-child{
+    margin-bottom: 0;
+  }
+  &:hover{
+    color: #00FFC2;
+  }
+}
+.under{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.counterText{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.end{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.total{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+  @include fluid(margin-bottom, 4px, 5px);
+}
+.prise{
+  @include fluid(font-size,14px, 16px);
+  font-weight: 600;
+
+}

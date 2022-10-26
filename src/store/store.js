@@ -9,6 +9,7 @@ import newsReducer from "./slice/newsSlice.js";
 import helpReducer from "./slice/helpSlice.js"
 import orderReducer from "./slice/orderSlice.js"
 import contactReducer from "./slice/contactSlice.js";
+import swiperReducer from "./slice/swiperSlice.js";
 const rootReducer = combineReducers({
     productReducer,
     mainReducer,
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
     helpReducer,
     contactReducer,
     orderReducer,
+    swiperReducer,
 
 });
 

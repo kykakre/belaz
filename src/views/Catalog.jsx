@@ -9,7 +9,7 @@ const Catalog = (props) => {
 
     return (
         <div className="content">
-            <Search/>
+
             <Title arrow={true} title={"Популярное"} link="/popular"/>
             <Product product={props.product} slice={10}/>
             <Title arrow={true} title={"Мы рекомендуем"} link="/recommend"/>

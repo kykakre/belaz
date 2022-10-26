@@ -1,0 +1,35 @@
+@import '../../style/Mixins.scss';
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #F2F2F2;
+  border-radius: 5px;
+  @include fluid(width, 70px, 99px);
+}
+.button{
+  @include fluid(width, 20px, 27px);
+  @include fluid(height, 28px, 33px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #F2F2F2;
+  @include fluid(font-size,12px, 14px);
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: .38s ease-in-out;
+}
+.input{
+  @include fluid(font-size,12px, 14px);
+   font-weight: 500;
+  text-align: center;
+  color: #000;
+ }
+.none{
+  pointer-events: none;
+  opacity: 0.3;
+}

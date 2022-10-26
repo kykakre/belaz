@@ -1,0 +1,24 @@
+@import "../../style/Mixins.scss";
+
+.bunner{
+  @include fluid(margin-top, 25px, 50px);
+  @include fluid(margin-bottom, 25px, 50px);
+    background: url("../../assets/bunnerLkMain.png") no-repeat;
+  width: 100%;
+  height: fit-content;
+  background-size: cover;
+  @include fluid(padding-top, 20px, 45px);
+  @include fluid(padding-bottom, 20px, 45px);
+  @include fluid(padding-left, 20px, 40px);
+  @include fluid(padding-right, 20px, 40px);
+}
+.title{
+  @include fluid(font-size,16px, 20px);
+  font-weight: 700;
+  
+}
+.subtitle{
+  @include fluid(font-size,14px, 16px);
+  font-weight: 500;
+  
+}

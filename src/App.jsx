@@ -12,10 +12,13 @@ import RecommendContainer from "./views/RecommendContainer.jsx";
 import CategoryContainer from "./views/CategoryContainer.jsx";
 import LkContainer from "./views/LkContainer.jsx";
 import "antd/dist/antd.css";
+import "swiper/css";
+import "swiper/css/navigation";
 import "./style/Style.scss";
 import HowToBuyContainer from "./views/HowToBuyContainer.jsx";
 import PopularContainer from "./views/PopularContainer.jsx";
 import NewsDetailsContainer from "./components/NewsDetails/NewsDetailContainer.jsx";
+import BasketContainer from "./views/BasketContainer.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -35,6 +38,7 @@ function App() {
               <Route path="recommend" element={<RecommendContainer />} />
                 <Route path="howToBuy/*" element={<HowToBuyContainer/>}/>
                 <Route path="lk/*" element={<LkContainer />}/>
+              <Route path="basket" element={<BasketContainer/>}/>
 
 
 

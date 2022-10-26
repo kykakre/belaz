@@ -1,0 +1,97 @@
+@import "../../style/Mixins.scss";
+
+.flex{
+  display: flex;
+  align-items: center;
+  @include fluid(margin-bottom, 10px, 20px);
+
+}
+.title{
+  @include fluid(font-size,18px, 20px);
+  font-weight: 700;
+  @include fluid(margin-right, 15px, 25px);
+}
+.link{
+  @include fluid(font-size,14px, 16px);
+  color: #00FFC2;
+
+}
+.block{
+  @include fluid(margin-top, 25px, 50px);
+  
+}
+table{
+  tr{
+
+
+    @include fluid(padding-top, 10px, 15px);
+    @include fluid(padding-bottom, 10px, 15px);
+    background: #EFEFEF;
+    &:nth-child(2n){
+      background: #fff;
+    }
+    th{
+      @include fluid(font-size,10px, 12px);
+      font-weight: 600;
+      @include fluid(padding-top, 10px, 15px);
+      @include fluid(padding-bottom, 10px, 15px);
+      &:first-child{
+        @include fluid(padding-left, 15px, 30px);
+      }
+      &:nth-child(2){
+        text-align: left;
+      }
+      &:nth-child(3){
+        width: 25%;
+      }
+      &:nth-child(3){
+        width: 25%;
+      }
+      &:nth-child(4){
+        width: 25%;
+
+      }
+      &:nth-child(5){
+        width: 25%;
+
+      }
+      &:last-child{
+        @include fluid(padding-right, 15px, 30px);
+      }
+    }
+    td{
+      @include fluid(padding-top, 10px, 15px);
+      @include fluid(padding-bottom, 10px, 15px);
+      @include fluid(font-size,10px, 12px);
+      font-weight: 600;
+      &:first-child{
+        @include fluid(padding-left, 15px, 30px);
+        width: 25%;
+      }
+      &:nth-child(2){
+        width: 25%;
+       text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      &:nth-child(3){
+        width: 25%;
+      }
+      &:nth-child(3){
+        width: 25%;
+      }
+      &:nth-child(4){
+        width: 25%;
+
+      }
+      &:nth-child(5){
+        width: 25%;
+
+      }
+      &:last-child{
+        width: 25%;
+        @include fluid(padding-right, 15px, 30px);
+      }
+    }
+  }
+}
