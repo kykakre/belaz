@@ -19,6 +19,7 @@ import HowToBuyContainer from "./views/HowToBuyContainer.jsx";
 import PopularContainer from "./views/PopularContainer.jsx";
 import NewsDetailsContainer from "./components/NewsDetails/NewsDetailContainer.jsx";
 import BasketContainer from "./views/BasketContainer.jsx";
+import BasketOrderContainer from "./views/BasketOrderContainer.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -38,7 +39,8 @@ function App() {
               <Route path="recommend" element={<RecommendContainer />} />
                 <Route path="howToBuy/*" element={<HowToBuyContainer/>}/>
                 <Route path="lk/*" element={<LkContainer />}/>
-              <Route path="basket" element={<BasketContainer/>}/>
+              <Route path="lk/basket/*" element={<BasketContainer/>}/>
+              <Route path="lk/basket/order" element={<BasketOrderContainer/>}/>
 
 
 

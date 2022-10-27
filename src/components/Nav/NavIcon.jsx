@@ -13,7 +13,7 @@ export default function Icon(props) {
           <Avatar shape="square" icon={<Favorite />} />
         </Badge>
       </NavLink>
-      <NavLink to="basket" className={style.iconItem}>
+      <NavLink to="lk/basket" className={style.iconItem}>
         <Badge count={1}>
           <Avatar shape="square" icon={<Basket />} />
         </Badge>

@@ -155,3 +155,13 @@ body {
   align-items: center;
   justify-content: center;
 }
+.ant-radio-wrapper:hover .ant-radio, .ant-radio:hover .ant-radio-inner, .ant-radio-input:focus + .ant-radio-inner{
+ border-color: #00FFC2;
+}
+.ant-radio-inner::after{
+  background-color: #00FFC2;
+}
+.ant-radio-checked .ant-radio-inner{
+  border-color: #00FFC2;
+
+}

@@ -6,10 +6,11 @@
   @include fluid(margin-bottom, 50px, 100px);
 }
 .block{
-  width: 70%;
+  width: 68%;
 }
 .sidebar{
-  width: 28%;
+  position: relative;
+  width: 30%;
 }
 .flexBlock{
   display: flex;
@@ -116,5 +117,42 @@
 .prise{
   @include fluid(font-size,14px, 16px);
   font-weight: 600;
+
+}
+.blockNotFound{
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;justify-content: center;
+}
+.shop{
+  @include fluid(width, 40px, 50px);
+  @include fluid(height, 40px, 50px);
+  object-fit: contain;
+  object-position: center;
+  @include fluid(margin-right, 15px, 25px);
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:hover{
+    div{
+      color: #00FFC2;
+
+    }
+  }
+  div{
+    color: #000;
+    transition: .38s ease-in-out;
+    &:last-child{
+      color: #00FFC2;
+    }
+
+  }
+}
+.basket{
+  @include fluid(font-size,14px, 16px);
+  font-weight: 700;
 
 }

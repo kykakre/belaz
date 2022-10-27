@@ -1,0 +1,162 @@
+@import "../../style/Mixins.scss";
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  @include fluid(margin-bottom, 50px, 100px);
+}
+.block{
+  width: 68%;
+}
+.sidebar{
+  position: relative;
+  width: 30%;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav{
+  @include fluid(font-size,14px, 16px);
+  border: 1px solid #FBFBFB;
+  background: #FBFBFB;
+  color: #000;
+  border-radius: 10px;
+  font-weight: 500;
+  @include fluid(padding-top, 7px, 10px);
+  @include fluid(padding-bottom, 7px, 10px);
+  width: 33%;
+  transition: .38s ease-in-out;
+  text-align: center;
+  &:hover{
+    background: #FFF;
+    color: #000;
+  }
+}
+.card{
+  background: #FBFBFB;
+  border-radius: 10px;
+  @include fluid(padding-left, 15px, 20px);
+  @include fluid(padding-right, 15px, 20px);
+  @include fluid(padding-top, 20px, 30px);
+  @include fluid(padding-bottom,20px, 30px);
+  @include fluid(margin-bottom, 20px, 30px);
+}
+.title{
+  @include fluid(font-size,14px, 16px);
+  font-weight: 700;
+  @include fluid(margin-bottom, 15px, 20px);
+}
+.item{
+  border: 2px solid #00FFC2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  @include fluid(padding, 10px, 20px);
+  width: 50%;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.icon{
+  @include fluid(width, 20px, 30px);
+  @include fluid(height, 20px, 30px);
+  object-position: center;
+  object-fit: contain;
+  @include fluid(margin-right, 15px, 20px);
+}
+.text{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+}
+.description{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+  @include fluid(margin-bottom, 15px, 20px);
+}
+.input{
+  width: 48%;
+  border: 2px solid #CCCCCC;
+  border-radius: 10px !important;
+  @include fluid(height, 30px, 60px);
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+  @include fluid(font-size,14px, 16px);
+  @include fluid(margin-bottom, 10px, 20px);
+  &:focus{
+    border-color: #00FFC2 !important;
+    box-shadow: 0 0 0 2px rgba(0, 255, 192, 0.2) !important;
+    border-right-width: 1px;
+    outline: 0;
+  }
+  &:hover{
+    border-color: #00FFC2 !important;
+  }
+  &::placeholder{
+    color: #CCCCCC;
+  }
+}
+.fullInput{
+  width: 100%;
+  border: 2px solid #CCCCCC;
+  border-radius: 10px !important;
+  @include fluid(height, 30px, 60px);
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+  @include fluid(font-size,14px, 16px);
+  @include fluid(margin-bottom, 10px, 20px);
+  &:focus{
+    border-color: #00FFC2 !important;
+    box-shadow: 0 0 0 2px rgba(0, 255, 192, 0.2) !important;
+    border-right-width: 1px;
+    outline: 0;
+  }
+  &:hover{
+    border-color: #00FFC2 !important;
+  }
+  &::placeholder{
+    color: #CCCCCC;
+  }
+}
+.checkboxItem{
+  display: flex;
+  align-items: center;
+}
+.checkbox{
+  margin-top: 0;
+  @include fluid(width, 15px, 17px);
+  @include fluid(height, 15px, 17px);
+  @include fluid(margin-right, 10px, 15px);
+}
+.checkboxText{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+}
+.itemDelivery{
+  display: flex;
+  align-items: center;
+  @include fluid(margin-bottom, 20px, 25px);
+}
+.checkboxDelivery{
+  @include fluid(width, 15px, 17px);
+  @include fluid(height, 15px, 17px);
+  @include fluid(margin-right, 10px, 15px);
+}
+.iconDelivery{
+  @include fluid(width, 27px, 32px);
+  @include fluid(height, 27px, 32px);
+  object-fit: contain;
+  @include fluid(margin-right, 10px, 15px);
+  object-position: center;
+}
+.deliveryText{
+  @include fluid(font-size,14px, 16px);
+  font-weight: 600;
+  color: #000;
+}
+.deliveryDescription{
+  @include fluid(font-size,12px, 14px);
+  letter-spacing: 0.05em;
+  color: #333333;
+}

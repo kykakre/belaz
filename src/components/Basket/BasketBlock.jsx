@@ -2,6 +2,7 @@ import React from 'react';
 import style from "./Basket.module.scss"
 import {Checkbox} from "antd";
 import BasketItem from "./BasketItem.jsx";
+import BasketNotFound from "./BasketNotFound.jsx";
 const BasketBlock = (props) => {
 
     let item =props.product.map((e)=>(
@@ -15,7 +16,7 @@ const BasketBlock = (props) => {
                 <Checkbox id="all" type="checkbox">Выбрать все</Checkbox>
                 <div className={style.delete}>Удалить выбранные </div>
             </div>
-            {item}
+            {props.product.length === 0? <BasketNotFound/>:item}
         </>
     );
 };

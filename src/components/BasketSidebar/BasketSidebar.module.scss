@@ -1,0 +1,85 @@
+@import "../../style/Mixins.scss";
+.sidebar{
+  position: sticky;
+  top: 20%;
+
+  background: #FBFBFB;
+  border-radius: 10px;
+  @include fluid(padding,15px,30px);
+}
+.btn{
+  display: block;
+  text-align: center;
+  @include fluid(font-size,12px, 14px);
+  font-weight: 700;
+  color: #000;
+  background: #00FFC2;
+  border-radius: 5px;
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  transition: .38s ease-in-out;
+  width: 100%;
+  @include fluid(margin-bottom, 10px, 15px);
+  &:hover{
+    color: #fff;
+  }
+}
+.description{
+  @include fluid(font-size,11px, 13px);
+  color: #858585;
+  font-weight: 500;
+  @include fluid(margin-bottom, 15px, 25px);
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  &:first-child{
+    margin-bottom: 15px;
+  }
+  &:last-child{
+    margin-bottom: 0;}
+}
+.card{
+  border-top:1px solid #CCCCCC;
+  border-bottom:1px solid #CCCCCC;
+  @include fluid(padding-top, 15px, 25px);
+  @include fluid(padding-bottom, 15px, 25px);
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.title{
+  @include fluid(font-size,14px, 16px);
+  font-weight: 700;
+  color: #000;
+}
+.info{
+  @include fluid(font-size,11px, 13px);
+  color: #858585;
+  font-weight: 500;
+}
+.text{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 500;
+  span{
+    color: #858585;
+  }
+}
+.count{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 700;
+  color: #000;
+}
+.discount{
+  @include fluid(font-size,12px, 14px);
+  font-weight: 700;
+  color: #FF5252;
+}
+.totalTitle{
+  font-weight: 700;
+  @include fluid(font-size,14px, 16px);
+}
+.totalCount{
+@include fluid(font-size,16px, 20px);
+  font-weight: 700;
+}
