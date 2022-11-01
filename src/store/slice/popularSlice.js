@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import product from "../../assets/product.svg";
+import {GetPopularsProducts} from "../../api/product.js";
 const initialState = {
     popular: [
         {
@@ -212,7 +213,25 @@ const initialState = {
 export const populartSlice = createSlice({
     name: "product",
     initialState,
-    reducers: {},
+    reducers: {
+        fetchProducts(state,action){
+            state.isLoading = true;
+        },
+        successFetchProducts(state,action){
+            state.popular = action.payload;
+            state.isLoading = false
+        },
+    },
 });
+
+export const GetPopulars = (
+
+) => {
+    return async (dispatch) => {
+        dispatch(populartSlice.actions.fetchProducts())
+        const response = await GetPopularsProducts();
+        dispatch(populartSlice.actions.successFetchProducts(response));
+    };
+};
 
 export default populartSlice.reducer;

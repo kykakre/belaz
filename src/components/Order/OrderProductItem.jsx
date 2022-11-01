@@ -7,7 +7,7 @@ import Counter from "../Counter/Counter.jsx";
 const OrderProductItem = (props) => {
     return (
         <div className={style.card}>
-           
+
             <div className={style.checkbox}>{props.product.id}</div>
             <img src={props.product.img} className={style.img}/>
             <div className={style.info}>

@@ -7,7 +7,7 @@ import ContactsMin from "../ContactsMini/ContactsMin.jsx";
 import LinkMini from "../LinkMini/LinkMini.jsx";
 import AskMini from "../AskMini/AskMini.jsx";
 const NewsContent = (props) => {
-
+    props.GetNewsAll()
     let item = props.news.map((e)=>(
         <NewsContentItem id={e.id} key={e.id} title={e.title} leed={e.leed} data={e.data} photo={e.photo}/>
     ))

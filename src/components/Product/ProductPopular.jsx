@@ -11,6 +11,8 @@ import ProductItemLine from "./ProductItemLine.jsx";
 
 const ProductPopular = (props) => {
     const [line,setLine] = useState(false)
+    props.GetPopulars()
+    console.log(props.product)
     let item = props.product.map((e)=>(
         <ProductItem id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price}/>
     ))

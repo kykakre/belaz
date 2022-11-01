@@ -1,5 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import newsPhoto from "../../assets/newsPhoto.png"
+import {GetPopularsProducts} from "../../api/product.js";
+import {populartSlice} from "./popularSlice.js";
+import {GetNews} from "../../api/news.js";
 const initialState = {
    news:[
        {
@@ -63,7 +66,25 @@ const initialState = {
 export const newsSlice = createSlice({
     name: "news",
     initialState,
-    reducers: {},
+    reducers: {
+        fetchNews(state,action){
+            state.isLoading = true
+        },
+        successFetchNews(state,action){
+            state.news = action.payload
+                state.isLoading = false
+        }
+    },
 });
+
+export const GetNewsAll = (
+
+) => {
+    return async (dispatch) => {
+        dispatch(newsSlice.actions.fetchNews())
+        const response = await GetNews();
+        dispatch(newsSlice.actions.successFetchNews(response));
+    };
+};
 
 export default newsSlice.reducer;
