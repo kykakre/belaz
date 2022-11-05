@@ -1,67 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import category from "../../assets/category.svg"
+import {GetCategoryProducts} from "../../api/category.js";
 const initialState = {
    category:[
-       {
-           id:1,
-           img:category,
-           title:"Домкраты",
-           description:"Многократный лауреат премии Автокомпонент года и лауреат премии Автоаксессуар года...",
-       },
-       {
-           id:2,
-           img:category,
-           title:"Домкраты",
-           description:"Многократный лауреат премии Автокомпонент года и лауреат премии Автоаксессуар года...",
-       },
-       {
-           id:3,
-           img:category,
-           title:"Домкраты",
-           description:"Многократный лауреат премии Автокомпонент года и лауреат премии Автоаксессуар года...",
-       },
-       {
-           id:4,
-           img:category,
-           title:"Домкраты",
-           description:"Многократный лауреат премии Автокомпонент года и лауреат премии Автоаксессуар года...",
-       },
-       {
-           id:5,
-           img:category,
-           title:"Домкраты",
-           description:"Многократный лауреат премии Автокомпонент года и лауреат премии Автоаксессуар года...",
-       },
-       {
-           id:6,
-           img:category,
-           title:"Домкраты",
-           description:"Многократный лауреат премии Автокомпонент года и лауреат премии Автоаксессуар года...",
-       },
-       {
-           id:7,
-           img:category,
-           title:"Домкраты",
-           description:"Многократный лауреат премии Автокомпонент года и лауреат премии Автоаксессуар года...",
-       },
-       {
-           id:8,
-           img:category,
-           title:"Домкраты",
-           description:"Многократный лауреат премии Автокомпонент года и лауреат премии Автоаксессуар года...",
-       },
-       {
-           id:9,
-           img:category,
-           title:"Домкраты",
-           description:"Многократный лауреат премии Автокомпонент года и лауреат премии Автоаксессуар года...",
-       },
-       {
-           id:10,
-           img:category,
-           title:"Домкраты",
-           description:"Многократный лауреат премии Автокомпонент года и лауреат премии Автоаксессуар года...",
-       },
+
    ],
     isLoading: false,
     error: "",
@@ -70,7 +11,25 @@ const initialState = {
 export const categorySlice = createSlice({
     name: "category",
     initialState,
-    reducers: {},
+    reducers: {
+        fetchCategory(state){
+            state.isLoading = true
+        },
+        successFetchCategory(state,action){
+            state.category = action.payload
+            state.isLoading = false
+        }
+    },
 });
+
+export const GetCategory = (
+    page, limit
+) => {
+    return async (dispatch) => {
+        dispatch(categorySlice.actions.fetchCategory())
+        const response = await GetCategoryProducts(page,limit);
+        dispatch(categorySlice.actions.successFetchCategory(response));
+    };
+};
 
 export default categorySlice.reducer;

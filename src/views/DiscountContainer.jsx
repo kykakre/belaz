@@ -4,7 +4,7 @@ import {GetAvailables} from "../store/slice/availableSlice.js";
 
 let mapStateToProps = (state) => {
     return {
-        availebles:state.availableReducer.availebles,
+        availables:state.availableReducer.availables,
 
     };
 };

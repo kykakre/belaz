@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Search from "../components/Search/Search.jsx";
-import BreadcrumbDiscount from "../components/Breadcrumb/BreadcrumbDiscount.jsx";
 import ProductPopular from "../components/Product/ProductPopular.jsx";
-import {GetPopulars} from "../store/slice/popularSlice.js";
-import {AddBasket} from "../store/slice/basketSlice.js";
 
 const Popular = (props) => {
+
+    useEffect(() =>{
+
+        props.GetPopulars(
+            1,20
+        );
+
+    }, [])
+
+
     return (
         <div className="content">
             <Search/>
-            <ProductPopular AddBasket={props.AddBasket} GetPopulars={props.GetPopulars} product={props.product}/>
+            <ProductPopular  GetPopulars={props.GetPopulars} product={props.populars}/>
 
         </div>
     );

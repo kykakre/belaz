@@ -22,13 +22,12 @@ export const popularSlice = createSlice({
 });
 
 export const GetPopulars = (
-    page,limit
+    page, limit
 ) => {
     return async (dispatch) => {
         dispatch(popularSlice.actions.fetchPopulars())
         const response = await GetPopularsProducts(page,limit);
         dispatch(popularSlice.actions.successFetchPopulars(response));
-        console.log("response",response)
     };
 };
 

@@ -27,7 +27,6 @@ export const GetRecommends = (
         dispatch(recommendSlice.actions.fetchRecommends())
         const response = await GetRecommendsProducts(page,limit);
         dispatch(recommendSlice.actions.successFetchRecommend(response));
-        console.log("recomend",response)
     };
 };
 

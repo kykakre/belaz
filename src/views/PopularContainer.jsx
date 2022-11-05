@@ -4,9 +4,9 @@ import {GetPopulars} from "../store/slice/popularSlice.js";
 import {AddBasket} from "../store/slice/basketSlice.js";
 let mapStateToProps = (state) => {
     return {
-        product:state.productReducer.product,
+        populars:state.popularReducer.populars,
     };
 };
 
-const PopularContainer = connect(mapStateToProps,{GetPopulars,AddBasket})(Popular);
+const PopularContainer = connect(mapStateToProps,{GetPopulars})(Popular);
 export default PopularContainer;

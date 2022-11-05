@@ -6,7 +6,6 @@ import ProductDiscount from "../components/Product/ProductDiscount.jsx";
 const Discount = (props) => {
 
 
-    debugger
 
     useEffect(() =>{
 
@@ -14,13 +13,13 @@ const Discount = (props) => {
             1,20
         );
 
-    }, [props.availebles])
+    }, [])
 
     return (
         <div className="content">
             <Search/>
             <BreadcrumbDiscount/>
-            <ProductDiscount availebles={props.availebles}/>
+            <ProductDiscount availables={props.availables}/>
             
         </div>
     );

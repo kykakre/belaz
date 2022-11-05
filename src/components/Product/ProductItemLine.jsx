@@ -7,7 +7,7 @@ const ProductItemLine = (props) => {
     return (
         <div className={style.lineFlex}>
             <div className={style.lineContain}>
-            <img  alt="product" src={props.img} className={style.lineImg}/>
+            <img  alt="product" src={"https://s.stats.cfd/"+props.img} className={style.lineImg}/>
             {props.special ? <div className={style.special}>Спецпредложение</div> : <></> }
             </div>
             <div>

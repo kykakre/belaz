@@ -11,14 +11,17 @@ const Catalog = (props) => {
 
     useEffect(() =>{
         props.GetPopulars(
-            1,10
+            1,5
         );
         props.GetRecommends(
             1,5
         )
         props.GetAvailables(
-            1,5
+            1,10
         );
+        props.GetCategory(
+            1,10
+        )
 
 
     }, [])

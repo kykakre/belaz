@@ -13,9 +13,11 @@ import contactReducer from "./slice/contactSlice.js";
 import basketReducer from "./slice/basketSlice.js"
 import swiperReducer from "./slice/swiperSlice.js";
 import availableReducer from "./slice/availableSlice.js";
+import actualReducer from "./slice/actualSlice.js";
 const rootReducer = combineReducers({
     productReducer,
     popularReducer,
+    actualReducer,
     recommendReducer,
     availableReducer,
     mainReducer,

@@ -12,11 +12,10 @@ import {AddBasket} from "../../store/slice/basketSlice.js";
 
 const ProductPopular = (props) => {
     const [line,setLine] = useState(false)
-    props.GetPopulars()
-    let item = props.product.map((e)=>(
+    let item = props.product?.map((e)=>(
         <ProductItem AddBasket={props.AddBasket} id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price}/>
     ))
-    let itemLine = props.product.map((e)=>(
+    let itemLine = props.product?.map((e)=>(
         <ProductItemLine AddBasket={props.AddBasket} id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price} description={e.description} />
     ))
     return (
