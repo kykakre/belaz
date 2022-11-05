@@ -1,247 +1,33 @@
 import { createSlice } from "@reduxjs/toolkit";
-import product from "../../assets/product.svg";
+import {GetProductsAll} from "../../api/product.js";
 const initialState = {
-    product: [
-        {
-            id:1,
-            special:true,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-        },
-        {
-            id:2,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-
-        },
-        {
-            id:3,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-
-        },
-        {
-            id:4,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-
-        },
-        {
-            id:5,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-
-        },
-        {
-            id:6,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-
-        },
-        {
-            id:7,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-
-        },
-        {
-            id:8,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-
-        },
-        {
-            id:9,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-
-        },
-        {
-            id:10,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-
-        },
-        {
-            id:11,
-            special:true,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-        },
-        {
-            id:12,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-        },
-        {
-            id:13,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-        },
-        {
-            id:14,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-        },
-        {
-            id:15,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-        },
-        {
-            id:16,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-        },
-        {
-            id:17,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-        },
-        {
-            id:18,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-        },
-        {
-            id:19,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-        },
-        {
-            id:20,
-            special:false,
-            img:product,
-            title:"Тормозная камера тип 30 (OEM № 203272900) BELAK",
-            grabe:5.0,
-            totalGrabe:14,
-            price:1924,
-            description:"Тормозная камера тип 30 BELAK™ приводит в действие тормозные механизмы колес. Данная модель специально разработана для европейских грузовиков, прицепов и полуприцепов ...",
-
-        },
-
-
-    ],
+    products:[],
     isLoading: false,
     error: "",
 };
 
-export const productSlice = createSlice({
-    name: "product",
+export const productsSlice = createSlice({
+    name: "products",
     initialState,
-    reducers: {},
+    reducers: {
+        fetchProducts(state){
+            state.isLoading = true;
+        },
+        successFetchProducts(state,action){
+            state.products = action.payload;
+            state.isLoading = false
+        },
+    },
 });
 
-export default productSlice.reducer;
+export const GetProducts = (
+    page,limit
+) => {
+    return async (dispatch) => {
+        dispatch(productsSlice.actions.fetchProducts())
+        const response = await GetProductsAll(page,limit);
+        dispatch(productsSlice.actions.successFetchProducts(response));
+    };
+};
+
+export default productsSlice.reducer;

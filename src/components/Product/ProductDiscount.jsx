@@ -9,11 +9,15 @@ import TitleDiscount from "../Title/TitleDiscount.jsx";
 import ProductItemLine from "./ProductItemLine.jsx";
 
 const ProductDiscount = (props) => {
+
+
     const [line,setLine] = useState(false)
-    let item = props.product.map((e)=>(
+
+    console.log(props.availebles)
+    let item = props.availebles?.map((e)=>(
         <ProductItem id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price}/>
     ))
-    let itemLine = props.product.map((e)=>(
+    let itemLine = props.availebles?.map((e)=>(
         <ProductItemLine id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price} description={e.description} />
     ))
     return (

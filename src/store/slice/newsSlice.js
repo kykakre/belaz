@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import newsPhoto from "../../assets/newsPhoto.png"
 import {GetPopularsProducts} from "../../api/product.js";
-import {populartSlice} from "./popularSlice.js";
 import {GetNews} from "../../api/news.js";
 const initialState = {
    news:[

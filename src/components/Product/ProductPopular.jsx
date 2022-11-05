@@ -8,16 +8,16 @@ import ProductFilter from "./ProductFilter.jsx";
 import BreadcrumbPopular from "../Breadcrumb/BreadcrumbPopular.jsx";
 import TitlePopular from "../Title/TitlePopular.jsx";
 import ProductItemLine from "./ProductItemLine.jsx";
+import {AddBasket} from "../../store/slice/basketSlice.js";
 
 const ProductPopular = (props) => {
     const [line,setLine] = useState(false)
     props.GetPopulars()
-    console.log(props.product)
     let item = props.product.map((e)=>(
-        <ProductItem id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price}/>
+        <ProductItem AddBasket={props.AddBasket} id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price}/>
     ))
     let itemLine = props.product.map((e)=>(
-        <ProductItemLine id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price} description={e.description} />
+        <ProductItemLine AddBasket={props.AddBasket} id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price} description={e.description} />
     ))
     return (
         <>
