@@ -10,7 +10,7 @@ const ProductItemLine = (props) => {
             <img  alt="product" src={"https://s.stats.cfd/"+props.img} className={style.lineImg}/>
             {props.special ? <div className={style.special}>Спецпредложение</div> : <></> }
             </div>
-            <div>
+            <div className={style.info}>
                 <div className={style.lineTitle}>{props.title}</div>
                 <div className={style.grabe}>
                     <img alt="star" src={star} className={style.lineStar}/>

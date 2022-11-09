@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {GetNewsProducts} from "../../api/product.js";
 const initialState = {
-    new:[],
+    new: {
+        data:[],
+        pageCount:0,
+    },
     isLoading: false,
     error: "",
 };

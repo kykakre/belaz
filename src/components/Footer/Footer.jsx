@@ -17,7 +17,7 @@ const Footer = (props) => {
                 <div className={style.item}>
                     <div  className={style.title}>Каталог</div>
                     <NavLink to="discount" className={style.link}>Скидки</NavLink>
-                    <NavLink to="special" className={style.link}>Спецпредложение</NavLink>
+                    {/*<NavLink to="special" className={style.link}>Спецпредложение</NavLink>*/}
                     <NavLink to="popular" className={style.link}>Популярное</NavLink>
                     <NavLink to="actual" className={style.link}>Актуальные</NavLink>
                     <NavLink to="recommend" className={style.link}>Мы рекомендуем</NavLink>
@@ -35,8 +35,8 @@ const Footer = (props) => {
                     <div className={style.linkPhone}>
                         Заказать звонок
                     </div>
-                    <div className={style.phone}>+7 (343) 287-57-32</div>
-                    <div className={style.text}>info@agregatekb.ru</div>
+                    <a href="tel:+73432875732" className={style.phone}>+7 (343) 287-57-32</a>
+                    <a href="mailto:info@agregatekb.ru" className={style.text}>info@agregatekb.ru</a>
                 </div>
             </div>
 

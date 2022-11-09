@@ -1,10 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {GetAvailablesProducts} from "../../api/product.js";
 const initialState = {
-    availables: [
+    availables: {
+        data:[],
+        pageCount:0,
+    }
 
 
-    ],
+    ,
     isLoading: false,
     error: "",
 };

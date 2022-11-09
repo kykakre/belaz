@@ -5,13 +5,14 @@ import LineOrBlock from "../LineOrBlock/LineOrBlock.jsx";
 import CategoryItem from "./CategoryItem.jsx";
 import CategoryItemLine from "./CategoryItemLine.jsx";
 const CategoryAll = (props) => {
+
     const [line,setLine] = useState(false)
 
-    let item = props.category.map((e)=>(
-        <CategoryItem id={e.id} key={e.key} img={e.img} title={e.title} description={e.description}/>
+    let item = props.category?.data?.map((e)=>(
+        <CategoryItem id={e.id} key={e.id} img={e.img} title={e.title} description={e.description}/>
     ))
-    let itemLong = props.category.map((e)=>(
-        <CategoryItemLine id={e.id} key={e.key} img={e.img} title={e.title} description={e.description}/>
+    let itemLong = props.category?.data?.map((e)=>(
+        <CategoryItemLine id={e.id} key={e.id} img={e.img} title={e.title} description={e.description}/>
     ))
     return (
         <>

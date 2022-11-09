@@ -86,6 +86,7 @@ body {
   width: 75%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .ant-slider-track{
   background-color: $green;
@@ -164,4 +165,40 @@ body {
 .ant-radio-checked .ant-radio-inner{
   border-color: #00FFC2;
 
+}
+.ant-pagination-next {
+  margin-right: 0;
+  &:hover{
+    border-color: #00FFC2;
+    a{
+      color: #00FFC2;
+    }
+  }
+}
+
+
+.ant-pagination-prev:hover .ant-pagination-item-link, .ant-pagination-next:hover .ant-pagination-item-link{
+    border-color: #00FFC2;
+      color: #00FFC2;
+
+}
+.ant-pagination-item{
+  transition: .38s ease-in-out;
+  a{
+    transition: .38s ease-in-out;
+  }
+  &:hover{
+    border-color: #00FFC2;
+    a{
+      color: #00FFC2;
+    }
+  }
+}
+.ant-pagination-item-active{
+  border-color: #00FFC2;
+
+
+  a{
+    color: #00FFC2;
+  }
 }

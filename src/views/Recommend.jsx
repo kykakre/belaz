@@ -17,7 +17,7 @@ const Recommend = (props) => {
         <div className="content">
             <Search/>
             <BreadcrumbRecomendate/>
-            <ProductRecomend product={props.recommend}/>
+            <ProductRecomend GetRecommends={props.GetRecommends} product={props.recommend}/>
 
         </div>
     );

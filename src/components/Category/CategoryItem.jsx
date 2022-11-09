@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 const CategoryItem = (props) => {
     return (
         <div className={style.card}>
-            <img src={"http://"+props.img} className={style.img} alt="img"/>
+            <img src={"https://s.stats.cfd/"+props.img} className={style.img} alt="img"/>
             <div className={style.title}>{props.title}</div>
             <div className={style.description}>{props.description}</div>
             <NavLink to="" className={style.nav}>Перейти</NavLink>

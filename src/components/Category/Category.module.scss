@@ -17,11 +17,10 @@
   }
 }
 .img{
-  @include fluid(width, 150px, 190px);
+  width: 100%;
   @include fluid(height, 160px, 200px);
   object-fit: cover;
   object-position: center;
-
   @include fluid(margin-bottom, 7px, 10px);
 }
 .title{

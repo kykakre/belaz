@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {GetPopularsProducts} from "../../api/product.js";
 const initialState = {
-    populars: [
-    ],
+    populars: {
+        data:[],
+        pageCount:0,
+    },
     isLoading: false,
     error: "",
 };

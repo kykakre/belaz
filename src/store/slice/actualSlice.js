@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {GetActualsProducts} from "../../api/product.js";
 const initialState = {
-    actual: [
-
-
-    ],
+    actual: {
+        data:[],
+        pageCount:0,
+    },
     isLoading: false,
     error: "",
 };

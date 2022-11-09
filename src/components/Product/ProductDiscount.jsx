@@ -7,17 +7,17 @@ import ProductItem from "./ProductItem.jsx";
 import ProductFilter from "./ProductFilter.jsx";
 import TitleDiscount from "../Title/TitleDiscount.jsx";
 import ProductItemLine from "./ProductItemLine.jsx";
+import PaginationBlock from "../Pagination/PaginationBlock.jsx";
 
 const ProductDiscount = (props) => {
 
 
     const [line,setLine] = useState(false)
 
-    console.log(props.availebles)
-    let item = props.availables?.map((e)=>(
+    let item = props.availables.data?.map((e)=>(
         <ProductItem id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price}/>
     ))
-    let itemLine = props.availables?.map((e)=>(
+    let itemLine = props.availables.data?.map((e)=>(
         <ProductItemLine id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price} description={e.description} />
     ))
     return (
@@ -35,8 +35,11 @@ const ProductDiscount = (props) => {
                 </div>
                 <div className="cards">
                     {line?itemLine:item}
+                    <PaginationBlock Function={props.GetAvailables}  total={props.availables?.pageCount}/>
+
                 </div>
             </div>
+
 
 
         </>

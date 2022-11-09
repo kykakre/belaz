@@ -19,7 +19,7 @@ const Discount = (props) => {
         <div className="content">
             <Search/>
             <BreadcrumbDiscount/>
-            <ProductDiscount availables={props.availables}/>
+            <ProductDiscount GetAvailables={props.GetAvailables} availables={props.availables}/>
             
         </div>
     );

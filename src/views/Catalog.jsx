@@ -3,7 +3,6 @@ import Title from "../components/Title/Title.jsx";
 import Product from "../components/Product/Product.jsx";
 import Banner from "../components/Banner/Banner.jsx";
 import Category from "../components/Category/Category.jsx";
-import {GetRecommends} from "../store/slice/recommendSlice.js";
 
 const Catalog = (props) => {
 

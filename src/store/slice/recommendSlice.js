@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {GetRecommendsProducts} from "../../api/product.js";
 const initialState = {
-    recommends:[],
+    recommend: {
+        data:[],
+        pageCount:0,
+    },
     isLoading: false,
     error: "",
 };

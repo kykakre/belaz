@@ -17,7 +17,7 @@ const Actual = (props) => {
         <div className="content">
             <Search/>
             <BreadcrumbActual/>
-            <ProductActual product={props.actual}/>
+            <ProductActual GetActual={props.GetActual} product={props.actual}/>
 
         </div>
     );

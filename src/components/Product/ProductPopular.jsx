@@ -9,13 +9,14 @@ import BreadcrumbPopular from "../Breadcrumb/BreadcrumbPopular.jsx";
 import TitlePopular from "../Title/TitlePopular.jsx";
 import ProductItemLine from "./ProductItemLine.jsx";
 import {AddBasket} from "../../store/slice/basketSlice.js";
+import PaginationBlock from "../Pagination/PaginationBlock.jsx";
 
 const ProductPopular = (props) => {
     const [line,setLine] = useState(false)
-    let item = props.product?.map((e)=>(
+    let item = props.product.data?.map((e)=>(
         <ProductItem AddBasket={props.AddBasket} id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price}/>
     ))
-    let itemLine = props.product?.map((e)=>(
+    let itemLine = props.product.data?.map((e)=>(
         <ProductItemLine AddBasket={props.AddBasket} id={e.id} key={e.id} title={e.title} special={e.special} img={e.img} grabe={e.grabe} totalGrabe={e.totalGrabe} price={e.price} description={e.description} />
     ))
     return (
@@ -34,6 +35,8 @@ const ProductPopular = (props) => {
                 </div>
                 <div className="cards">
                     {line?itemLine:item}
+                    <PaginationBlock Function={props.GetPopulars}  total={props.product?.pageCount}/>
+
                 </div>
             </div>
 
