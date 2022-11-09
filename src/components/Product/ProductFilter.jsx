@@ -1,10 +1,33 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import style from "./Product.module.scss"
 import { Checkbox } from 'antd';
 import { Slider } from 'antd';
 import filter from "../../assets/filter.svg"
 const ProductFilter = (props) => {
-    return (
+
+
+        const[inputValue,setInputValue]=useState([props.filter?.minPrice,props.filter?.maxPrice])
+
+
+        const onChange = (newValue) => {
+                setInputValue(newValue);
+        };
+
+        let category = []
+
+    useEffect(() =>{
+
+        props.Function(props.current,20,inputValue[0],inputValue[1],category)
+
+
+
+    }, [inputValue,category])
+
+
+        return (
+
+
+
         <div className={style.filter}>
                 <div className={style.filterTop}>
                         <div className={style.filterText}>Фильтр</div>
@@ -15,36 +38,28 @@ const ProductFilter = (props) => {
                 range={{
                     draggableTrack: true,
                 }}
-                defaultValue={[1924, 50600]}
-                max={50687}
-                min={1924}
+                defaultValue={[props.filter?.minPrice, props.filter?.maxPrice]}
+
+                min={props.filter?.minPrice}
+                max={props.filter?.maxPrice}
+                onChange={onChange}
             />
-            <Checkbox >Акции</Checkbox>
-            <Checkbox >Домкраты</Checkbox>
-            <Checkbox >Камеры тормозные</Checkbox>
-            <Checkbox >Компрессоры для накачки шин</Checkbox>
-            <Checkbox >Грузовые диски и корзины сцепления</Checkbox>
-            <Checkbox >Щетки, поводки стеклоочистителя</Checkbox>
-            <Checkbox >Подставки под автомобиль</Checkbox>
-            <Checkbox >Камеры тормозные с энергоаккумулятором</Checkbox>
-            <Checkbox >Тормозные клапаны</Checkbox>
-            <Checkbox >Зеркала</Checkbox>
-            <Checkbox >Пневмогидравлические усилители привода сцепления (ПГУ)</Checkbox>
-            <Checkbox >Гайковерты</Checkbox>
-            <Checkbox >Регуляторы давления воздуха (РДВ)</Checkbox>
-            <Checkbox >Регулировочные рычаги тормоза</Checkbox>
-            <Checkbox >Фитинги соединительные</Checkbox>
-            <Checkbox >Насосы перекачки топлива</Checkbox>
-            <Checkbox >Армотизаторы</Checkbox>
-            <Checkbox >Тормозные краны</Checkbox>
-            <Checkbox >Насосы ГУР</Checkbox>
-            <Checkbox >Насосы отопителя циркуляционные</Checkbox>
-            <Checkbox >Осушители воздуха</Checkbox>
-            <Checkbox >Пресс-масленки</Checkbox>
-            <Checkbox >Трапеция (механизм) стеклоочистителя</Checkbox>
-            <Checkbox >Шприцы и комплектующие</Checkbox>
-            <Checkbox >Электродвигатели</Checkbox>
-            <Checkbox >Электробензонасосы</Checkbox>
+                {props.filter?.categories.map((e)=>(
+                    <Checkbox id={e.id} key={e.key} onClick={(value)=>{
+                       if(value.target.checked === true){
+                           category.push(e.id)
+                       }
+                       if(value.target.checked === false){
+
+                          let i = category.indexOf(e.id);
+                           if(i >= 0) {
+                               category.splice(i,1);
+                           }
+
+                       }
+
+                    }}>{e.title}</Checkbox>
+                ))}
 
         </div>
     );

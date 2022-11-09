@@ -2,7 +2,6 @@ import React, {useEffect,useState} from 'react';
 import Search from "../components/Search/Search.jsx";
 import BreadcrumbNews from "../components/Breadcrumb/BreadcrumbNews.jsx";
 import NewsContent from "../components/NewsContent/NewsContent.jsx";
-import {GetDetail} from "../store/slice/newsSlice.js";
 
 const News = (props) => {
 
@@ -29,7 +28,7 @@ const News = (props) => {
         <div className="content">
             <Search/>
             <BreadcrumbNews/>
-            <NewsContent GetDetail={props.GetDetail} year={year} setYear={setYear} GetNewsAll={props.GetNewsAll} news={props.news}/>
+            <NewsContent  year={year} setYear={setYear} GetNewsAll={props.GetNewsAll} detail={props.detail} news={props.news}/>
         </div>
     );
 };

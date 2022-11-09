@@ -6,13 +6,12 @@ import NewsContentItem from "./NewsContentItem.jsx";
 import ContactsMin from "../ContactsMini/ContactsMin.jsx";
 import LinkMini from "../LinkMini/LinkMini.jsx";
 import AskMini from "../AskMini/AskMini.jsx";
-import {GetDetail} from "../../store/slice/newsSlice.js";
 const NewsContent = (props) => {
 
 
 
     let item = props.news.data?.map((e)=>(
-        <NewsContentItem GetDetail={props.GetDetail} id={e.id} key={e.id} name={e.name} text={e.text} createdAt={e.createdAt} img={e.img}/>
+        <NewsContentItem  id={e.id} key={e.id} name={e.name} text={e.text} createdAt={e.createdAt} img={e.img}/>
     ))
     return (
         <div className={style.container}>

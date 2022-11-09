@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
 import NewsDetails from "./NewsDetails.jsx";
+import {GetDetail} from "../../store/slice/newsDetailSlice.js";
 let mapStateToProps = (state) => {
     return {
-        news: state.newsReducer.news,
+        detail: state.newsDetailReducer.detail,
     };
 };
 
-const MainContainer = connect(mapStateToProps)(NewsDetails);
-export default MainContainer;
+const NewsDetailContainer = connect(mapStateToProps,{GetDetail})(NewsDetails);
+export default NewsDetailContainer;

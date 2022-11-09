@@ -4,7 +4,6 @@ const initialState = {
    news:[
 
    ],
-
     isLoading: false,
     error: "",
 };
@@ -19,7 +18,8 @@ export const newsSlice = createSlice({
         successFetchNews(state,action){
             state.news = action.payload
             state.isLoading = false
-        }
+        },
+
     },
 });
 
@@ -32,14 +32,6 @@ export const GetNewsAll = (
         dispatch(newsSlice.actions.successFetchNews(response));
     };
 };
-export const GetDetail = (
-  id
-) => {
-    return async (dispatch) => {
-        dispatch(newsSlice.actions.fetchNews())
-        const response = await GetNewsDetail(id);
-        dispatch(newsSlice.actions.successFetchNews(response));
-    };
-};
+
 
 export default newsSlice.reducer;

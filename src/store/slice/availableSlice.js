@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {GetAvailablesProducts} from "../../api/product.js";
+import {GetAvailablesProducts, GetFilteredAvailables} from "../../api/product.js";
 const initialState = {
     availables: {
         data:[],
@@ -34,7 +34,17 @@ export const GetAvailables = (
         dispatch(availableSlice.actions.fetchAvailables())
         const response = await GetAvailablesProducts(page,limit);
         dispatch(availableSlice.actions.successFetchAvailables(response));
-        console.log("avali",response)
+    };
+};
+
+export const GetAvailablesFiltered = (
+    page,limit,minPrice,maxPrice,categoryId
+) => {
+    return async (dispatch) => {
+        dispatch(availableSlice.actions.fetchAvailables())
+        const response = await GetFilteredAvailables(page,limit,minPrice,maxPrice,categoryId);
+        dispatch(availableSlice.actions.successFetchAvailables(response));
+        console.log(response)
     };
 };
 

@@ -16,6 +16,17 @@
 .info{
   width: 100%;
 }
+.leed{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+}
 .newsTitle{
   display: flex;
   align-items: center;

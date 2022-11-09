@@ -14,6 +14,8 @@ import basketReducer from "./slice/basketSlice.js"
 import swiperReducer from "./slice/swiperSlice.js";
 import availableReducer from "./slice/availableSlice.js";
 import actualReducer from "./slice/actualSlice.js";
+import newsDetailReducer from "./slice/newsDetailSlice.js";
+import filterReducer from "./slice/filterSlice.js"
 const rootReducer = combineReducers({
     productReducer,
     popularReducer,
@@ -29,6 +31,8 @@ const rootReducer = combineReducers({
     orderReducer,
     swiperReducer,
     basketReducer,
+    newsDetailReducer,
+    filterReducer,
 
 });
 

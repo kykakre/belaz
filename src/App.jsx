@@ -17,7 +17,7 @@ import "swiper/css/navigation";
 import "./style/Style.scss";
 import HowToBuyContainer from "./views/HowToBuyContainer.jsx";
 import PopularContainer from "./views/PopularContainer.jsx";
-import NewsDetailsContainer from "./components/NewsDetails/NewsDetailContainer.jsx";
+import NewsDetailContainer from "./components/NewsDetails/NewsDetailContainer.jsx";
 import BasketContainer from "./views/BasketContainer.jsx";
 import BasketOrderContainer from "./views/BasketOrderContainer.jsx";
 function App() {
@@ -33,7 +33,7 @@ function App() {
               <Route path="special" element={<SpecialContainer />} />
               <Route path="popular" element={<PopularContainer />} />
               <Route path="/news/*" element={<NewsContainer />} />
-              <Route path="/news/:id" element={<NewsDetailsContainer/>}/>
+              <Route path="/news/:id" element={<NewsDetailContainer/>}/>
               <Route path="contact" element={<ContactContainer />} />
               <Route path="actual" element={<ActualContainer />} />
               <Route path="recommend" element={<RecommendContainer />} />
