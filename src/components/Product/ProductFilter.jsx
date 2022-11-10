@@ -5,8 +5,10 @@ import { Slider } from 'antd';
 import filter from "../../assets/filter.svg"
 const ProductFilter = (props) => {
 
+    console.log(props.filter?.maxPrice)
+
     const[inputValue,setInputValue]=useState([props.filter?.minPrice,props.filter?.maxPrice])
-    let category = []
+    const[category,setCategory]  =useState ([])
 
 
     function useDebounce(inputValue,category, delay) {
@@ -27,9 +29,8 @@ const ProductFilter = (props) => {
 
 
     useEffect(() => {
-        console.log(props.current,20,inputValue[0],inputValue[1],category)
         props.Function(props.current,20,inputValue[0],inputValue[1],category)
-    }, [debouncedValue])
+    }, [debouncedValue,props.current,category])
 
 
 
@@ -56,25 +57,21 @@ const ProductFilter = (props) => {
                 range={{
                     draggableTrack: true,
                 }}
-                defaultValue={[1, 2]}
 
                 min={props.filter?.minPrice}
                 max={props.filter?.maxPrice}
+                defaultValue={[1, 447031]}
+
                 onChange={onChange}
             />
                 {props.filter?.categories.map((e)=>(
                     <Checkbox id={e.id} key={e.key} onClick={(value)=>{
-                       if(value.target.checked === true){
-                           category.push(e.id)
-                       }
-                       if(value.target.checked === false){
+                        setCategory(category =>
+                            !!value.target.checked
+                                ? [...category, e.id]
+                                : category.filter(category => category !== e.id)
+                        )
 
-                          let i = category.indexOf(e.id);
-                           if(i >= 0) {
-                               category.splice(i,1);
-                           }
-
-                       }
 
                     }}>{e.title}</Checkbox>
                 ))}

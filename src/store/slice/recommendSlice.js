@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {GetRecommendsProducts} from "../../api/product.js";
+import {GetFilteredRecommend, GetRecommendsProducts} from "../../api/product.js";
 const initialState = {
     recommend: {
         data:[],
@@ -33,4 +33,15 @@ export const GetRecommends = (
     };
 };
 
+export const GetRecommendFiltered = (
+    page,limit,minPrice,maxPrice,categoryId
+) => {
+    return async (dispatch) => {
+        dispatch(recommendSlice.actions.fetchRecommends())
+        const response = await GetFilteredRecommend(page,limit,minPrice,maxPrice,categoryId);
+        dispatch(recommendSlice.actions.successFetchRecommend(response));
+    };
+};
+
 export default recommendSlice.reducer;
+

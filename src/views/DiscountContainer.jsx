@@ -1,13 +1,15 @@
 import { connect } from "react-redux";
 import Discount from "./Discount.jsx";
-import {GetAvailables} from "../store/slice/availableSlice.js";
+import {GetAvailables, GetAvailablesFiltered} from "../store/slice/availableSlice.js";
+import {GetFilter} from "../store/slice/filterSlice.js";
 
 let mapStateToProps = (state) => {
     return {
         availables:state.availableReducer.availables,
+        filter:state.filterReducer.filter,
 
     };
 };
 
-const DiscountContainer = connect(mapStateToProps,{GetAvailables})(Discount);
+const DiscountContainer = connect(mapStateToProps,{GetAvailables,GetAvailablesFiltered,GetFilter})(Discount);
 export default DiscountContainer;

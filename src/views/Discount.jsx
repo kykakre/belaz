@@ -12,6 +12,7 @@ const Discount = (props) => {
         props.GetAvailables(
             1,20
         );
+        props.GetFilter()
 
     }, [])
 
@@ -19,7 +20,7 @@ const Discount = (props) => {
         <div className="content">
             <Search/>
             <BreadcrumbDiscount/>
-            <ProductDiscount GetAvailables={props.GetAvailables} availables={props.availables}/>
+            <ProductDiscount GetAvailables={props.GetAvailables} availables={props.availables} GetAvailablesFiltered={props.GetAvailablesFiltered} GetFilter={props.GetFilter} filter={props.filter}/>
             
         </div>
     );

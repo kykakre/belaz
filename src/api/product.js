@@ -60,8 +60,9 @@ export const GetFilteredActual = async(page,limit,minPrice,maxPrice,categoryId) 
              {"RequestData": {}}).then((response) => {
              return response.data;
          });
-    }else{
-         return await Api.get("api/products/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isActual]=true&search[categoryId]="+categoryId,
+
+     else{
+         return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isActual]=true&search[categoryId]="+categoryId.join(","),
              {"RequestData": {}}).then((response) => {
              return response.data;
          });
@@ -70,17 +71,34 @@ export const GetFilteredActual = async(page,limit,minPrice,maxPrice,categoryId) 
 
 };
 export const GetFilteredPopular = async(page,limit,minPrice,maxPrice,categoryId) => {
-    return await Api.get("api/products/fproducts?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]=",minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isPopular]=true&search[categoryId]="+categoryId,
-        {"RequestData": {}}).then((response) => {
-        return response.data;
-    });
+    if(categoryId.length === 0){
+
+        return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isPopular]=true",
+            {"RequestData": {}}).then((response) => {
+            return response.data;
+        });
+    }else{
+        return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isPopular]=true&search[categoryId]="+categoryId.join(","),
+            {"RequestData": {}}).then((response) => {
+            return response.data;
+        });
+    }
+
 };
 
 export const GetFilteredRecommend = async(page,limit,minPrice,maxPrice,categoryId) => {
-    return await Api.get("api/products/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]=",minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isRecommend]=true&search[categoryId]="+categoryId,
-        {"RequestData": {}}).then((response) => {
-        return response.data;
-    });
+    if(categoryId.length === 0){
+
+        return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isRecommend]=true",
+            {"RequestData": {}}).then((response) => {
+            return response.data;
+        });
+    }else{
+        return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isRecommend]=true&search[categoryId]="+categoryId.join(","),
+            {"RequestData": {}}).then((response) => {
+            return response.data;
+        });
+    }
 };
 
 export const GetFilteredNews = async(page,limit,minPrice,maxPrice,categoryId) => {
@@ -91,11 +109,18 @@ export const GetFilteredNews = async(page,limit,minPrice,maxPrice,categoryId) =>
 };
 
 export const GetFilteredAvailables = async(page,limit,minPrice,maxPrice,categoryId) => {
-    console.log("api",page,limit,minPrice,maxPrice,categoryId)
-    return await Api.get("api/products/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isAvailable]=true&search[categoryId]="+categoryId,
-        {"RequestData": {}}).then((response) => {
-        return response.data;
-    });
+    if(categoryId.length === 0){
+
+        return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isAvailable]=true",
+            {"RequestData": {}}).then((response) => {
+            return response.data;
+        });
+    }else{
+        return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isAvailable]=true&search[categoryId]="+categoryId.join(","),
+            {"RequestData": {}}).then((response) => {
+            return response.data;
+        });
+    }
 };
 
 

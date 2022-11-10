@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {GetActualsProducts, GetFilteredActual} from "../../api/product.js";
-import {availableSlice} from "./availableSlice.js";
 const initialState = {
     actual: {
         data:[],

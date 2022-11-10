@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {GetPopularsProducts} from "../../api/product.js";
+import { GetFilteredPopular, GetPopularsProducts} from "../../api/product.js";
 const initialState = {
     populars: {
         data:[],
@@ -29,6 +29,17 @@ export const GetPopulars = (
     return async (dispatch) => {
         dispatch(popularSlice.actions.fetchPopulars())
         const response = await GetPopularsProducts(page,limit);
+        dispatch(popularSlice.actions.successFetchPopulars(response));
+    };
+};
+
+
+export const GetPopularFiltered = (
+    page,limit,minPrice,maxPrice,categoryId
+) => {
+    return async (dispatch) => {
+        dispatch(popularSlice.actions.fetchPopulars())
+        const response = await GetFilteredPopular(page,limit,minPrice,maxPrice,categoryId);
         dispatch(popularSlice.actions.successFetchPopulars(response));
     };
 };

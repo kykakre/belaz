@@ -6,12 +6,7 @@ const PaginationBlock = (props) => {
 
 
     const onChange = (page) => {
-        console.log(page);
         props.setCurrent(page);
-
-        props.Function(
-            page , 20
-        )
         window.scrollTo(0,0)
     };
 
