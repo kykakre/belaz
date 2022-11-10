@@ -54,7 +54,7 @@ export const GetFilterProducts = async() => {
 };
 
 export const GetFilteredActual = async(page,limit,minPrice,maxPrice,categoryId) => {
-    return await Api.get("api/products/fproducts?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]=",minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isActual]=true&search[categoryId]="+categoryId,
+    return await Api.get("api/products/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isActual]=true&search[categoryId]="+categoryId,
         {"RequestData": {}}).then((response) => {
         return response.data;
     });
@@ -81,6 +81,7 @@ export const GetFilteredNews = async(page,limit,minPrice,maxPrice,categoryId) =>
 };
 
 export const GetFilteredAvailables = async(page,limit,minPrice,maxPrice,categoryId) => {
+    console.log("api",page,limit,minPrice,maxPrice,categoryId)
     return await Api.get("api/products/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isAvailable]=true&search[categoryId]="+categoryId,
         {"RequestData": {}}).then((response) => {
         return response.data;

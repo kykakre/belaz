@@ -3,6 +3,7 @@ import Search from "../components/Search/Search.jsx";
 import ProductActual from "../components/Product/ProductActual.jsx";
 import BreadcrumbActual from "../components/Breadcrumb/BreadcrumbActual.jsx";
 import {GetAvailablesFiltered} from "../store/slice/availableSlice.js";
+import {GetActualFiltered} from "../store/slice/actualSlice.js";
 
 const Actual = (props) => {
 
@@ -19,7 +20,7 @@ const Actual = (props) => {
         <div className="content">
             <Search/>
             <BreadcrumbActual/>
-            <ProductActual GetFilter={props.GetFilter} GetAvailablesFiltered={props.GetAvailablesFiltered} GetActual={props.GetActual} filter={props.filter} product={props.actual}/>
+            <ProductActual GetFilter={props.GetFilter} GetActualFiltered={props.GetActualFiltered} GetActual={props.GetActual} filter={props.filter} product={props.actual}/>
 
         </div>
     );

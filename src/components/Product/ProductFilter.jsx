@@ -5,23 +5,41 @@ import { Slider } from 'antd';
 import filter from "../../assets/filter.svg"
 const ProductFilter = (props) => {
 
+    const[inputValue,setInputValue]=useState([props.filter?.minPrice,props.filter?.maxPrice])
+    let category = []
 
-        const[inputValue,setInputValue]=useState([props.filter?.minPrice,props.filter?.maxPrice])
+
+    function useDebounce(inputValue,category, delay) {
+        const [debouncedValue, setDebouncedValue] = useState(inputValue,category)
+
+        useEffect(() => {
+            const timer = setTimeout(() => setDebouncedValue(inputValue,category), delay || 500)
+
+            return () => {
+                clearTimeout(timer)
+            }
+        }, [inputValue,category, delay])
+
+        return debouncedValue
+    }
+    const debouncedValue = useDebounce(inputValue,category, 700)
+
+
+
+    useEffect(() => {
+        console.log(props.current,20,inputValue[0],inputValue[1],category)
+        props.Function(props.current,20,inputValue[0],inputValue[1],category)
+    }, [debouncedValue])
+
+
 
 
         const onChange = (newValue) => {
                 setInputValue(newValue);
         };
 
-        let category = []
-
-    useEffect(() =>{
-
-        props.Function(props.current,20,inputValue[0],inputValue[1],category)
 
 
-
-    }, [inputValue,category])
 
 
         return (
@@ -38,7 +56,7 @@ const ProductFilter = (props) => {
                 range={{
                     draggableTrack: true,
                 }}
-                defaultValue={[props.filter?.minPrice, props.filter?.maxPrice]}
+                defaultValue={[1, 2]}
 
                 min={props.filter?.minPrice}
                 max={props.filter?.maxPrice}

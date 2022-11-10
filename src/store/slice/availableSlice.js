@@ -44,7 +44,6 @@ export const GetAvailablesFiltered = (
         dispatch(availableSlice.actions.fetchAvailables())
         const response = await GetFilteredAvailables(page,limit,minPrice,maxPrice,categoryId);
         dispatch(availableSlice.actions.successFetchAvailables(response));
-        console.log(response)
     };
 };
 

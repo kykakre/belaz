@@ -7,6 +7,7 @@ import ProductFilter from "./ProductFilter.jsx";
 import TitleActual from "../Title/TitleActual.jsx";
 import ProductItemLine from "./ProductItemLine.jsx";
 import PaginationBlock from "../Pagination/PaginationBlock.jsx";
+import {GetActualFiltered} from "../../store/slice/actualSlice.js";
 
 const ProductActual = (props) => {
     const [line,setLine] = useState(false)
@@ -30,7 +31,7 @@ const ProductActual = (props) => {
             </div>
             <div className="product">
                 <div className="filter">
-                    <ProductFilter current={current} setCurrent={setCurrent} Function={props.GetAvailablesFiltered} filter={props.filter?.data} GetFilter={props.GetFilter}/>
+                    <ProductFilter current={current} setCurrent={setCurrent} Function={props.GetActualFiltered} filter={props.filter?.data} GetFilter={props.GetFilter}/>
                 </div>
                 <div className="cards">
                     {line?itemLine:item}

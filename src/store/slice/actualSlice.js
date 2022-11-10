@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {GetActualsProducts} from "../../api/product.js";
+import {GetActualsProducts, GetFilteredActual} from "../../api/product.js";
+import {availableSlice} from "./availableSlice.js";
 const initialState = {
     actual: {
         data:[],
@@ -30,6 +31,16 @@ page,limit
     return async (dispatch) => {
         dispatch(actualSlice.actions.fetchActual())
         const response = await GetActualsProducts(page,limit);
+        dispatch(actualSlice.actions.successFetchActual(response));
+    };
+};
+
+export const GetActualFiltered = (
+    page,limit,minPrice,maxPrice,categoryId
+) => {
+    return async (dispatch) => {
+        dispatch(actualSlice.actions.fetchActual())
+        const response = await GetFilteredActual(page,limit,minPrice,maxPrice,categoryId);
         dispatch(actualSlice.actions.successFetchActual(response));
     };
 };
