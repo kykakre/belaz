@@ -54,10 +54,20 @@ export const GetFilterProducts = async() => {
 };
 
 export const GetFilteredActual = async(page,limit,minPrice,maxPrice,categoryId) => {
-    return await Api.get("api/products/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isActual]=true&search[categoryId]="+categoryId,
-        {"RequestData": {}}).then((response) => {
-        return response.data;
-    });
+     if(categoryId.length === 0){
+
+         return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isActual]=true",
+             {"RequestData": {}}).then((response) => {
+             return response.data;
+         });
+    }else{
+         return await Api.get("api/products/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isActual]=true&search[categoryId]="+categoryId,
+             {"RequestData": {}}).then((response) => {
+             return response.data;
+         });
+     }
+
+
 };
 export const GetFilteredPopular = async(page,limit,minPrice,maxPrice,categoryId) => {
     return await Api.get("api/products/fproducts?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]=",minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isPopular]=true&search[categoryId]="+categoryId,
