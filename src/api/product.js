@@ -1,11 +1,5 @@
 import {Api} from "./api.js";
 
-// export const GetSpecializationTypes = async()=>{
-//     const response = await Api.post("https://plugin-medok.spaceapp.ru/ApiConsultations/Specializations/GetSpecializationsTypes",
-//         {"RequestData": {}});
-//     return response.data.ResponseData.ListOfSpecializationsTypes;
-// }
-
 export const GetPopularsProducts = async(page,limit) => {
     return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[isPopular]=true" ,
         {"RequestData": {}}).then((response) => {
@@ -59,7 +53,7 @@ export const GetFilteredActual = async(page,limit,minPrice,maxPrice,categoryId) 
          return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isActual]=true",
              {"RequestData": {}}).then((response) => {
              return response.data;
-         });
+         })}
 
      else{
          return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]="+minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isActual]=true&search[categoryId]="+categoryId.join(","),
