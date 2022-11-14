@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {GetProductsAll} from "../../api/product.js";
+import {GetProductsAll, GetProductsCategory} from "../../api/product.js";
 const initialState = {
     products:[],
     isLoading: false,
@@ -21,11 +21,11 @@ export const productsSlice = createSlice({
 });
 
 export const GetProducts = (
-    page,limit
+    page,limit,categoryId
 ) => {
     return async (dispatch) => {
         dispatch(productsSlice.actions.fetchProducts())
-        const response = await GetProductsAll(page,limit);
+        const response = await GetProductsCategory(page,limit,categoryId);
         dispatch(productsSlice.actions.successFetchProducts(response));
     };
 };

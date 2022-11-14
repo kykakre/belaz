@@ -5,6 +5,7 @@ import {GetRecommends} from "../store/slice/recommendSlice.js";
 let mapStateToProps = (state) => {
     return {
         category:state.categoryReducer.category,
+        categoryLoader:state.categoryReducer.isLoading,
         recommend:state.recommendReducer.recommends,
     };
 };

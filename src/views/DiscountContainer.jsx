@@ -7,6 +7,7 @@ let mapStateToProps = (state) => {
     return {
         availables:state.availableReducer.availables,
         filter:state.filterReducer.filter,
+        availablesLoading:state.availableReducer.isLoading,
 
     };
 };

@@ -4,6 +4,7 @@ import {GetDetail} from "../../store/slice/newsDetailSlice.js";
 let mapStateToProps = (state) => {
     return {
         detail: state.newsDetailReducer.detail,
+        detailLoading:state.newsDetailReducer.isLoading,
     };
 };
 

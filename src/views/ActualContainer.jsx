@@ -5,6 +5,7 @@ import {GetFilter} from "../store/slice/filterSlice.js";
 let mapStateToProps = (state) => {
     return {
         actual:state.actualReducer.actual,
+        actualLoading:state.actualReducer.isLoading,
         filter:state.filterReducer.filter,
     };
 };

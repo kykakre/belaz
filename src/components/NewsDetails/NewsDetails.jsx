@@ -3,6 +3,7 @@ import BreadcrumbNews from "../Breadcrumb/BreadcrumbNews.jsx";
 import Title from "../Title/Title.jsx";
 import NewsDetailItem from "./NewsDetailItem.jsx";
 import {useParams} from "react-router-dom";
+import Preloader from '../Preloader/Preloader.jsx';
 const NewsDetails = (props) => {
 
     const id = useParams()
@@ -22,6 +23,7 @@ const NewsDetails = (props) => {
 
     return (
         <div className="content">
+            {props.detailLoading?<Preloader/>:""}
             <BreadcrumbNews/>
             <Title arrow={false} title="Новости"/>
             <NewsDetailItem detail={props.detail?.data}/>

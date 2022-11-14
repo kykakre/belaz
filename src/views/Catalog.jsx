@@ -3,6 +3,7 @@ import Title from "../components/Title/Title.jsx";
 import Product from "../components/Product/Product.jsx";
 import Banner from "../components/Banner/Banner.jsx";
 import Category from "../components/Category/Category.jsx";
+import Preloader from '../components/Preloader/Preloader.jsx';
 
 const Catalog = (props) => {
 
@@ -29,7 +30,7 @@ const Catalog = (props) => {
 
     return (
         <div className="content">
-
+            {props.popularLoading || props.recommendLoading || props.popularsLoading || props.categoryLoading ? <Preloader/> : "" }
             <Title arrow={true} title={"Популярное"} link="/popular"/>
             <Product products={props.populars}/>
             <Title arrow={true} title={"Мы рекомендуем"} link="/recommend"/>

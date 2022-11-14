@@ -4,6 +4,8 @@ import BreadcrumbCategory from "../components/Breadcrumb/BreadcrumbCategory.jsx"
 import CategoryAll from "../components/Category/CategoryAll.jsx";
 import Title from "../components/Title/Title.jsx";
 import Product from "../components/Product/Product.jsx";
+import Preloader from '../components/Preloader/Preloader.jsx';
+
 const Category = (props) => {
 
     useEffect(() =>{
@@ -21,6 +23,7 @@ const Category = (props) => {
     console.log(props.recommend)
     return (
         <div className="content">
+            {props.categoryLoader? <Preloader/>:""}
             <Search/>
             <BreadcrumbCategory/>
             <CategoryAll category={props.category}/>

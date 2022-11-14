@@ -7,7 +7,7 @@ const ProductFilter = (props) => {
 
     console.log(props.filter?.maxPrice)
 
-    const[inputValue,setInputValue]=useState([props.filter?.minPrice,props.filter?.maxPrice])
+    const[inputValue,setInputValue]=useState([1,447031])
     const[category,setCategory]  =useState ([])
 
 

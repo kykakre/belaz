@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import Search from "../components/Search/Search.jsx";
 import BreadcrumbDiscount from "../components/Breadcrumb/BreadcrumbDiscount.jsx";
 import ProductDiscount from "../components/Product/ProductDiscount.jsx";
+import Preloader from '../components/Preloader/Preloader.jsx';
 
 const Discount = (props) => {
 
@@ -18,6 +19,7 @@ const Discount = (props) => {
 
     return (
         <div className="content">
+            {props.availablesLoading?<Preloader/>:""}
             <Search/>
             <BreadcrumbDiscount/>
             <ProductDiscount GetAvailables={props.GetAvailables} availables={props.availables} GetAvailablesFiltered={props.GetAvailablesFiltered} GetFilter={props.GetFilter} filter={props.filter}/>

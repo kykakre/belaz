@@ -28,7 +28,8 @@ function App() {
             <Routes>
               <Route path="" element={<MainContainer />} />
               <Route path="catalog" element={<CatalogContainer />} />
-                <Route path="category" element={<CategoryContainer/>}/>
+                <Route path="category/*" element={<CategoryContainer/>}/>
+              <Route path="category/:id" element={<NewsDetailContainer/>}/>
               <Route path="discount" element={<DiscountContainer />} />
               <Route path="special" element={<SpecialContainer />} />
               <Route path="popular" element={<PopularContainer />} />

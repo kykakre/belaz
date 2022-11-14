@@ -4,6 +4,7 @@ import { GetNewsAll} from "../store/slice/newsSlice.js";
 let mapStateToProps = (state) => {
     return {
         news: state.newsReducer.news,
+        newsLoading: state.newsReducer.isLoading
     };
 };
 

@@ -31,6 +31,16 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive ? `${style.link} ${style.active}` : `${style.link} `
             }
+            to="category"
+          >
+            Категории
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? `${style.link} ${style.active}` : `${style.link} `
+            }
             to="news"
           >
             Новости

@@ -11,6 +11,10 @@ let mapStateToProps = (state) => {
         recommend:state.recommendReducer.recommends,
         availables:state.availableReducer.availables,
         category:state.categoryReducer.category,
+        popularLoading:state.popularReducer.isLoading,
+        recommendLoading:state.recommendReducer.isLoading,
+        popularsLoading:state.availableReducer.isLoading,
+        categoryLoading:state.categoryReducer.isLoading
     };
 };
 

@@ -6,7 +6,6 @@ export const GetPopularsProducts = async(page,limit) => {
         return response.data;
     });
 };
-
 export const GetActualsProducts = async(page,limit) => {
     return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[isActual]=true" ,
         {"RequestData": {}}).then((response) => {
@@ -14,7 +13,6 @@ export const GetActualsProducts = async(page,limit) => {
         return response.data;
     });
 };
-
 export const GetRecommendsProducts = async(page,limit) => {
     return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[isRecommend]=true",
         {"RequestData": {}})
@@ -23,7 +21,6 @@ export const GetRecommendsProducts = async(page,limit) => {
         return response.data;
     });
 };
-
 export const GetNewsProducts = async(page,limit) => {
     return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[isNew]=true",
         {"RequestData": {}}).then((response) => {
@@ -31,7 +28,6 @@ export const GetNewsProducts = async(page,limit) => {
         return response.data;
     });
 };
-
 export const GetAvailablesProducts = async(page,limit) => {
     return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[isAvailable]=true",
         {"RequestData": {}}).then((response) => {
@@ -39,14 +35,12 @@ export const GetAvailablesProducts = async(page,limit) => {
         return response.data;
     });
 };
-
 export const GetFilterProducts = async() => {
     return await Api.get("api/products/filter",
         {"RequestData": {}}).then((response) => {
         return response.data;
     });
 };
-
 export const GetFilteredActual = async(page,limit,minPrice,maxPrice,categoryId) => {
      if(categoryId.length === 0){
 
@@ -79,7 +73,6 @@ export const GetFilteredPopular = async(page,limit,minPrice,maxPrice,categoryId)
     }
 
 };
-
 export const GetFilteredRecommend = async(page,limit,minPrice,maxPrice,categoryId) => {
     if(categoryId.length === 0){
 
@@ -94,14 +87,12 @@ export const GetFilteredRecommend = async(page,limit,minPrice,maxPrice,categoryI
         });
     }
 };
-
 export const GetFilteredNews = async(page,limit,minPrice,maxPrice,categoryId) => {
     return await Api.get("api/products/products?pagination[page]="+page+"&pagination[limit]="+limit+"&filter[minPrice]=",minPrice+"&filter[maxPrice]="+maxPrice+"&filter[isNew]=true&search[categoryId]="+categoryId,
         {"RequestData": {}}).then((response) => {
         return response.data;
     });
 };
-
 export const GetFilteredAvailables = async(page,limit,minPrice,maxPrice,categoryId) => {
     if(categoryId.length === 0){
 
@@ -117,8 +108,12 @@ export const GetFilteredAvailables = async(page,limit,minPrice,maxPrice,category
     }
 };
 
-
-
+export const GetProductsCategory = async(page,limit,categoryId)=>{
+    return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit+"&search[categoryId]="+categoryId,
+        {"RequestData":{}}).then((response)=>{
+        return response.data;
+    })
+}
 
 export const GetProductsAll = async(page,limit)=>{
     return await Api.get("api/products?pagination[page]="+page+"&pagination[limit]="+limit,
