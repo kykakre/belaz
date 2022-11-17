@@ -1,42 +1,50 @@
 @import "../../style/Mixins.scss";
 
-.categoryContainer{
+.categoryContainer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.card{
-  background: #FFFFFF;
+.card {
+  background: #ffffff;
   border-radius: 10px;
   @include fluid(padding-bottom, 10px, 15px);
   @include fluid(margin-bottom, 10px, 20px);
   width: 18.1%;
   margin-right: 2.3%;
-  &:nth-child(5n){
+  &:nth-child(5n) {
     margin-right: 0;
   }
 }
-.img{
+.img {
   width: 100%;
   @include fluid(height, 160px, 200px);
   object-fit: cover;
   object-position: center;
   @include fluid(margin-bottom, 7px, 10px);
 }
-.title{
+.title {
   font-weight: 700;
-  @include fluid(font-size,12px, 14px);
+  @include fluid(font-size, 12px, 14px);
   color: #000;
   @include fluid(margin-bottom, 7px, 10px);
-  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  box-orient: vertical;
 }
-.description{
-  @include fluid(font-size,11px, 12px);
+.description {
+  @include fluid(font-size, 11px, 12px);
   font-weight: 500;
   @include fluid(margin-bottom, 20px, 28px);
 }
-.nav{
-  @include fluid(font-size,11px, 12px);
+.nav {
+  @include fluid(font-size, 11px, 12px);
   color: #000;
   @include fluid(padding-top, 3px, 5px);
   @include fluid(padding-bottom, 3px, 5px);
@@ -46,22 +54,22 @@
   display: block;
   border-radius: 5px;
   font-weight: 600;
-  transition: .38s ease-in-out;
-  &:hover{
+  transition: 0.38s ease-in-out;
+  &:hover {
     background: #000;
     color: #fff;
   }
 }
-.flexBetween{
+.flexBetween {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.flex{
+.flex {
   display: flex;
   align-items: center;
 }
-.icon{
+.icon {
   cursor: pointer;
   @include fluid(width, 30px, 40px);
   @include fluid(height, 30px, 40px);
@@ -69,53 +77,54 @@
   border: 1px solid #000;
   border-radius: 5px;
   @include fluid(margin-left, 7px, 10px);
-  transition: .38s ease-in-out;
-  &:hover{
+  transition: 0.38s ease-in-out;
+  &:hover {
     filter: none;
   }
 }
-.noActive{
-  filter: invert(93%) sepia(2%) saturate(12%) hue-rotate(356deg) brightness(89%) contrast(91%);
+.noActive {
+  filter: invert(93%) sepia(2%) saturate(12%) hue-rotate(356deg) brightness(89%)
+    contrast(91%);
 }
-.imgLong{
+.imgLong {
   @include fluid(width, 150px, 200px);
   @include fluid(height, 150px, 200px);
   object-fit: contain;
   @include fluid(margin-right, 30px, 55px);
 }
-.cardLine{
+.cardLine {
   width: 100%;
   display: flex;
   @include fluid(margin-bottom, 15px, 20px);
 }
-.titleLong{
-  @include fluid(font-size,14px, 16px);
+.titleLong {
+  @include fluid(font-size, 14px, 16px);
   font-weight: 700;
   @include fluid(margin-right, 15px, 20px);
   @include fluid(margin-bottom, 10px, 17px);
 }
-.countProduct{
-  @include fluid(font-size,12px, 14px);
-  color: #CCCCCC;
+.countProduct {
+  @include fluid(font-size, 12px, 14px);
+  color: #cccccc;
   font-weight: 500;
   @include fluid(margin-bottom, 10px, 17px);
 }
-.descriptionLong{
-  @include fluid(font-size,12px, 14px);
+.descriptionLong {
+  @include fluid(font-size, 12px, 14px);
   font-weight: 500;
 }
-.column{
+.column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
 }
-.flexEnd{
+.flexEnd {
   display: flex;
   justify-content: flex-end;
 }
-.navLong{
-  @include fluid(font-size,11px, 12px);
+.navLong {
+  @include fluid(font-size, 11px, 12px);
   color: #000;
   @include fluid(padding-top, 3px, 5px);
   @include fluid(padding-bottom, 3px, 5px);
@@ -126,8 +135,8 @@
   font-weight: 600;
   @include fluid(padding-left, 30px, 45px);
   @include fluid(padding-right, 30px, 45px);
-  transition: .38s ease-in-out;
-  &:hover{
+  transition: 0.38s ease-in-out;
+  &:hover {
     background: #000;
     color: #fff;
   }

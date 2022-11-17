@@ -20,32 +20,30 @@ import PopularContainer from "./views/PopularContainer.jsx";
 import NewsDetailContainer from "./components/NewsDetails/NewsDetailContainer.jsx";
 import BasketContainer from "./views/BasketContainer.jsx";
 import BasketOrderContainer from "./views/BasketOrderContainer.jsx";
+import ProductsContainer from "./views/ProductsContainer.jsx";
 function App() {
   return (
     <BrowserRouter>
       <div className="app">
         <Header />
-            <Routes>
-              <Route path="" element={<MainContainer />} />
-              <Route path="catalog" element={<CatalogContainer />} />
-                <Route path="category/*" element={<CategoryContainer/>}/>
-              <Route path="category/:id" element={<NewsDetailContainer/>}/>
-              <Route path="discount" element={<DiscountContainer />} />
-              <Route path="special" element={<SpecialContainer />} />
-              <Route path="popular" element={<PopularContainer />} />
-              <Route path="/news/*" element={<NewsContainer />} />
-              <Route path="/news/:id" element={<NewsDetailContainer/>}/>
-              <Route path="contact" element={<ContactContainer />} />
-              <Route path="actual" element={<ActualContainer />} />
-              <Route path="recommend" element={<RecommendContainer />} />
-                <Route path="howToBuy/*" element={<HowToBuyContainer/>}/>
-                <Route path="lk/*" element={<LkContainer />}/>
-              <Route path="lk/basket/*" element={<BasketContainer/>}/>
-              <Route path="lk/basket/order" element={<BasketOrderContainer/>}/>
-
-
-
-            </Routes>
+        <Routes>
+          <Route path="" element={<MainContainer />} />
+          <Route path="catalog" element={<CatalogContainer />} />
+          <Route path="category/*" element={<CategoryContainer />} />
+          <Route path="category/:id" element={<ProductsContainer />} />
+          <Route path="discount" element={<DiscountContainer />} />
+          <Route path="special" element={<SpecialContainer />} />
+          <Route path="popular" element={<PopularContainer />} />
+          <Route path="/news/*" element={<NewsContainer />} />
+          <Route path="/news/:id" element={<NewsDetailContainer />} />
+          <Route path="contact" element={<ContactContainer />} />
+          <Route path="actual" element={<ActualContainer />} />
+          <Route path="recommend" element={<RecommendContainer />} />
+          <Route path="howToBuy/*" element={<HowToBuyContainer />} />
+          <Route path="lk/*" element={<LkContainer />} />
+          <Route path="lk/basket/*" element={<BasketContainer />} />
+          <Route path="lk/basket/order" element={<BasketOrderContainer />} />
+        </Routes>
 
         <Footer />
       </div>

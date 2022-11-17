@@ -15,8 +15,8 @@ export default function Benefits(props) {
     <div className={style.container}>
       <div className={style.img} />
       <div className={style.content}>
-        <div className={style.title}>Преимущества</div>
-        <div className={style.subtitle}>торговой марки «БелАК»</div>
+        <div className={style.title}>Наши преимущества</div>
+        <div className={style.subtitle} />
         <div className={style.item}> {item}</div>
       </div>
     </div>
