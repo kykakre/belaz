@@ -13,7 +13,11 @@ const Contact = (props) => {
       <Search />
       <BreadcrumbContacts />
       <Title arrow={false} title="Контакты" />
-      <ContactsContent news={props.news} contacts={props.contacts} />
+      <ContactsContent
+        PostFeedbackFunc={props.PostFeedbackFunc}
+        news={props.news}
+        contacts={props.contacts}
+      />
     </div>
   );
 };

@@ -51,7 +51,7 @@ export default function ProductsCategory(props) {
         </div>
       </div>
       <div className="product">
-        {props.products.data.length === 0 ? (
+        {props.products.data?.length === 0 ? (
           "В данной категории товары не найдены, уточняйте информацию у продавца"
         ) : (
           <>
