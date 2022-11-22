@@ -1,0 +1,99 @@
+@import "../../style/Mixins.scss";
+
+.modal {
+  background: #ffffff;
+  padding-bottom: 0;
+}
+.link {
+  @include fluid(font-size, 12px, 14px);
+  font-weight: 500;
+  color: #fff;
+  transition: 0.38s ease-in-out;
+  position: relative;
+  cursor: pointer;
+  &:before {
+    width: 0%;
+    height: 5px;
+    background: $green;
+    position: absolute;
+    content: "";
+    @include fluid(top, 37px, 49px);
+    left: 50%;
+    transform: translate(-50%);
+    transition: 0.38s ease-in-out;
+  }
+  &:hover {
+    color: $green;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+.logo {
+  width: 207px;
+  height: 42px;
+  object-fit: contain;
+  @include fluid(margin-bottom, 30px, 60px);
+}
+.title {
+  @include fluid(font-size, 18px, 20px);
+  font-weight: 700;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.text {
+  @include fluid(font-size, 12px, 14px);
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+.input {
+  border: 2px solid #00ffc2;
+  border-radius: 15px;
+  @include fluid(padding-left, 15px, 25px);
+  @include fluid(padding-right, 15px, 25px);
+  height: 60px;
+  @include fluid(margin-bottom, 15px, 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inputText {
+  @include fluid(padding-top, 5px, 7px);
+  @include fluid(font-size, 8px, 10px);
+  color: #555;
+  @include fluid(margin-bottom, 6px, 8px);
+}
+.inputItem {
+  @include fluid(font-size, 14px, 16px);
+  color: #000;
+  border: none;
+  outline: none;
+  &::placeholder {
+    color: #bbb;
+  }
+}
+.btn {
+  background: #00ffc2;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  @include fluid(padding-top, 15px, 20px);
+  @include fluid(padding-bottom, 15px, 20px);
+  font-weight: 700;
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.form {
+  @include fluid(padding-bottom, 20px, 30px);
+  border-bottom: 2px solid #cccccc;
+  border-radius: 2px;
+}
+.linkModal {
+  text-align: center;
+  width: 100%;
+  @include fluid(font-size, 12px, 14px);
+  color: #a8a8a8;
+  @include fluid(margin-top, 25px, 35px);
+  cursor: pointer;
+}

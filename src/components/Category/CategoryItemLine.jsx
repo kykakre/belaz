@@ -3,6 +3,7 @@ import style from "./Category.module.scss";
 import { NavLink } from "react-router-dom";
 
 const CategoryItemLine = (props) => {
+  console.log(props);
   return (
     <div className={style.cardLine}>
       <img
@@ -13,7 +14,7 @@ const CategoryItemLine = (props) => {
       <div className={style.column}>
         <div className={style.flex}>
           <div className={style.titleLong}>{props.title}</div>
-          <div className={style.countProduct}>81 товаров</div>
+          <div className={style.countProduct}>{props.title}</div>
         </div>
         <div className={style.descriptionLong}>{props.description}</div>
         <div className={style.flexEnd}>

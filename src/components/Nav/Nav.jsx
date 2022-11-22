@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import style from "./Nav.module.scss";
+import ModalItem from "../Modal/ModalItem";
 import NavIcon from "./NavIcon";
 const Nav = () => {
   return (
@@ -56,18 +57,9 @@ const Nav = () => {
             Контакты
           </NavLink>
         </li>
-        <li>
-          <NavLink
-              className={({ isActive }) =>
-                  isActive ? `${style.link} ${style.active}` : `${style.link} `
-              }
-              to="lk"
-          >
-            Войти
-          </NavLink>
-        </li>
       </ul>
-      <NavIcon />
+      <ModalItem />
+      {localStorage.setItem("token", "") !== undefined ? <NavIcon /> : ""}
     </div>
   );
 };

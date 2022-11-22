@@ -14,11 +14,11 @@ button {
 }
 a {
   text-decoration: none;
-  &:hover{
-    color:#00FFC2;
+  &:hover {
+    color: #00ffc2;
   }
 }
-input{
+input {
   font-family: "Montserrat", sans-serif;
 }
 body {
@@ -31,10 +31,9 @@ body {
   overflow-x: hidden;
   max-width: 100%;
 }
-.content{
+.content {
   min-height: 100vh;
   @include container;
-
 }
 .ant-avatar {
   background: transparent;
@@ -75,130 +74,147 @@ body {
   align-items: center;
   justify-content: center;
 }
-.product{
+.product {
   display: flex;
   justify-content: space-between;
 }
-.filter{
+.filter {
   width: 18%;
 }
-.cards{
+.cards {
   width: 75%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.ant-slider-track{
+.ant-slider-track {
   background-color: $green;
 }
 .ant-slider-handle {
   border: solid 2px $green;
 }
 .ant-slider-handle .ant-tooltip-open {
-  border-color:$green;
+  border-color: $green;
 }
-.ant-slider-handle:focus{
+.ant-slider-handle:focus {
   border: solid 2px $green;
 }
-.ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open){
+.ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
   border-color: $green;
 }
-.ant-slider:hover .ant-slider-track{
+.ant-slider:hover .ant-slider-track {
   background-color: $green;
 }
-.ant-checkbox-wrapper + .ant-checkbox-wrapper{
+.ant-checkbox-wrapper + .ant-checkbox-wrapper {
   margin-left: 0;
 }
-.ant-checkbox-wrapper{
- @include fluid(margin-top, 10px, 15px);
+.ant-checkbox-wrapper {
+  @include fluid(margin-top, 10px, 15px);
 }
-.ant-checkbox-checked .ant-checkbox-inner{
+.ant-checkbox-checked .ant-checkbox-inner {
   background-color: $green;
   border-color: $green;
 }
-.ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + .ant-checkbox-inner{
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox-input:focus + .ant-checkbox-inner {
   border-color: $green;
 }
-.lk{
-  @include  container;
+.lk {
+  @include container;
   display: flex;
   min-height: 100vh;
   @include fluid(margin-top, 50px, 110spx);
   @include fluid(margin-bottom, 50px, 110px);
 }
-.block{
+.block {
   width: 75%;
 }
-.title{
-  @include fluid(font-size,18px, 24px);
+.title {
+  @include fluid(font-size, 18px, 24px);
   color: #000;
   position: relative;
   font-weight: 700;
   @include fluid(margin-bottom, 35px, 70px);
-  &:before{
+  &:before {
     position: absolute;
     bottom: -20px;
     left: 0;
     content: "";
-    background: #00FFC2;
+    background: #00ffc2;
     @include fluid(width, 150px, 350px);
     height: 3px;
   }
 }
-.next{
+.next {
   @include fluid(height, 195px, 240px);
   @include fluid(padding-left, 15px, 20px);
   @include fluid(padding-right, 15px, 20px);
-  background: #FFFFFF;
-  border: 1px solid #E2E2E2;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.ant-radio-wrapper:hover .ant-radio, .ant-radio:hover .ant-radio-inner, .ant-radio-input:focus + .ant-radio-inner{
- border-color: #00FFC2;
+.ant-radio-wrapper:hover .ant-radio,
+.ant-radio:hover .ant-radio-inner,
+.ant-radio-input:focus + .ant-radio-inner {
+  border-color: #00ffc2;
 }
-.ant-radio-inner::after{
-  background-color: #00FFC2;
+.ant-radio-inner::after {
+  background-color: #00ffc2;
 }
-.ant-radio-checked .ant-radio-inner{
-  border-color: #00FFC2;
-
+.ant-radio-checked .ant-radio-inner {
+  border-color: #00ffc2;
 }
 .ant-pagination-next {
   margin-right: 0;
-  &:hover{
-    border-color: #00FFC2;
-    a{
-      color: #00FFC2;
+  &:hover {
+    border-color: #00ffc2;
+    a {
+      color: #00ffc2;
     }
   }
 }
 
-
-.ant-pagination-prev:hover .ant-pagination-item-link, .ant-pagination-next:hover .ant-pagination-item-link{
-    border-color: #00FFC2;
-      color: #00FFC2;
-
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link {
+  border-color: #00ffc2;
+  color: #00ffc2;
 }
-.ant-pagination-item{
-  transition: .38s ease-in-out;
-  a{
-    transition: .38s ease-in-out;
+.ant-pagination-item {
+  transition: 0.38s ease-in-out;
+  a {
+    transition: 0.38s ease-in-out;
   }
-  &:hover{
-    border-color: #00FFC2;
-    a{
-      color: #00FFC2;
+  &:hover {
+    border-color: #00ffc2;
+    a {
+      color: #00ffc2;
     }
   }
 }
-.ant-pagination-item-active{
-  border-color: #00FFC2;
+.ant-pagination-item-active {
+  border-color: #00ffc2;
 
-
-  a{
-    color: #00FFC2;
+  a {
+    color: #00ffc2;
+  }
+}
+.ant {
+  &-modal {
+    padding-bottom: 0;
+    border-radius: 30px;
+    width: 508px;
+    &-body {
+      @include fluid(padding-left, 30px, 63px);
+      @include fluid(padding-right, 30px, 63px);
+      @include fluid(padding-top, 30px, 60px);
+      @include fluid(padding-bottom, 20px, 40px);
+    }
+    &-content {
+      border-radius: 30px;
+    }
   }
 }

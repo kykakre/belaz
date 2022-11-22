@@ -5,7 +5,7 @@ export default function Benefits(props) {
   let item = props.benefits.map((e) => (
     <BenefitsItem
       id={e.id}
-      key={e.key}
+      key={e.id}
       icon={e.icon}
       title={e.title}
       text={e.text}
