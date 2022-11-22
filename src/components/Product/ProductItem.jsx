@@ -5,9 +5,10 @@ import buy from "../../assets/buy.svg";
 import favorite from "../../assets/favorite.svg";
 import picture from "../../assets/nullPicture.png";
 import { AddBasket } from "../../store/slice/basketSlice.js";
+import { Link } from "react-router-dom";
 const ProductItem = (props) => {
   return (
-    <div className={style.card}>
+    <Link to={"/product/" + props.id} className={style.card}>
       <div className={style.contain}>
         <img
           src={
@@ -40,7 +41,7 @@ const ProductItem = (props) => {
         <div className={style.price}>{props.price} ₽</div>
         <img src={buy} className={style.buy} alt="icon" />
       </div>
-    </div>
+    </Link>
   );
 };
 

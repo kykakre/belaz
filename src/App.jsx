@@ -21,6 +21,7 @@ import NewsDetailContainer from "./components/NewsDetails/NewsDetailContainer.js
 import BasketContainer from "./views/BasketContainer.jsx";
 import BasketOrderContainer from "./views/BasketOrderContainer.jsx";
 import ProductsContainer from "./views/ProductsContainer.jsx";
+import ProductDetailContainer from "./views/ProductDetailContainer.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +32,7 @@ function App() {
           <Route path="catalog" element={<CatalogContainer />} />
           <Route path="category/*" element={<CategoryContainer />} />
           <Route path="category/:id" element={<ProductsContainer />} />
+          <Route path="product/:id" element={<ProductDetailContainer />} />
           <Route path="discount" element={<DiscountContainer />} />
           <Route path="special" element={<SpecialContainer />} />
           <Route path="popular" element={<PopularContainer />} />

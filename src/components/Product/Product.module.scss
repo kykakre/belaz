@@ -1,48 +1,51 @@
 @import "../../style/Mixins.scss";
 
-.productContainer{
+.productContainer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.card{
-  background: #FFFFFF;
+.card {
+  background: #ffffff;
   border-radius: 10px;
   @include fluid(padding-bottom, 10px, 15px);
   @include fluid(margin-bottom, 10px, 20px);
-
   @include fluid(width, 160px, 185px);
   margin-left: 1.54%;
-  &:nth-child(5n){
+  transition: 0.38s ease-in-out;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-bottom: 1px solid #00cf9d;
+  }
+  &:nth-child(5n) {
     margin-right: 0;
   }
-
 }
-.contain{
+.contain {
   position: relative;
-  background: #ECECEC;
-  border-radius: 10px ;
+  background: #ececec;
+  border-radius: 10px;
   overflow: hidden;
   @include fluid(margin-bottom, 5px, 10px);
   @include fluid(width, 150px, 190px);
   @include fluid(height, 160px, 200px);
 }
-.productImg{
+.productImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-.info{
+.info {
   width: 100%;
 }
-.special{
+.special {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #00CF9D;
+  background: #00cf9d;
   color: #fff;
-  @include fluid(font-size,10px, 12px);
+  @include fluid(font-size, 10px, 12px);
   font-weight: 600;
   @include fluid(padding-left, 4px, 8px);
   @include fluid(padding-right, 4px, 8px);
@@ -50,14 +53,14 @@
   @include fluid(padding-bottom, 2px, 3px);
   border-radius: 0px 10px 0px 0px;
 }
-.favorite{
+.favorite {
   position: absolute;
   @include fluid(top, 5px, 10px);
   @include fluid(right, 5px, 10px);
   cursor: pointer;
 }
-.title{
-  @include fluid(font-size,10px, 12px);
+.title {
+  @include fluid(font-size, 10px, 12px);
   color: #000;
   font-weight: 500;
   margin-bottom: 5px;
@@ -71,63 +74,63 @@
   line-clamp: 1;
   box-orient: vertical;
 }
-.flex{
+.flex {
   display: flex;
   align-items: center;
   @include fluid(margin-bottom, 7px, 8px);
 }
-.star{
+.star {
   @include fluid(width, 8px, 10px);
   @include fluid(height, 8px, 10px);
   object-fit: contain;
   @include fluid(margin-right, 4px, 5px);
 }
-.grabe{
-  @include fluid(font-size,9px, 10px);
+.grabe {
+  @include fluid(font-size, 9px, 10px);
   color: #858585;
   font-weight: 500;
 }
-.spaceBetween{
+.spaceBetween {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
-.price{
-  @include fluid(font-size,12px, 14px);
+.price {
+  @include fluid(font-size, 12px, 14px);
   color: #000000;
   font-weight: 600;
 }
-.buy{
+.buy {
   cursor: pointer;
   @include fluid(width, 15px, 30px);
   @include fluid(height, 15px, 30px);
   object-fit: contain;
-  border: 1px solid #F2F2F2;
+  border: 1px solid #f2f2f2;
   border-radius: 3px;
   @include fluid(padding-left, 3px, 6px);
   @include fluid(padding-right, 3px, 6px);
   @include fluid(padding-top, 3px, 6px);
   @include fluid(padding-bottom, 3px, 6px);
 }
-.sortFlex{
+.sortFlex {
   display: flex;
   align-items: center;
 }
-.flexBetween{
+.flexBetween {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.select{
+.select {
   @include fluid(width, 170px, 210px);
   @include fluid(height, 20px, 40px);
   margin-left: 10px !important;
 }
-.filter{
+.filter {
   display: flex;
   flex-direction: column;
 }
-.filterTop{
+.filterTop {
   display: flex;
   align-items: center;
   background-color: $green;
@@ -139,65 +142,68 @@
   border-radius: 5px 5px 0px 0px;
   @include fluid(margin-bottom, 15px, 30px);
 }
-.filterText{
-  @include fluid(font-size,12px, 14px);
+.filterText {
+  @include fluid(font-size, 12px, 14px);
   font-weight: 500;
 }
-.filterIcon{
+.filterIcon {
   @include fluid(width, 14px, 16px);
   @include fluid(height, 14px, 16px);
   object-fit: contain;
 }
-.titleFilter{
-  @include fluid(font-size,14px, 16px);
+.titleFilter {
+  @include fluid(font-size, 14px, 16px);
   font-weight: 600;
   @include fluid(margin-bottom, 15px, 20px);
 }
 
-.lineFlex{
+.lineFlex {
   display: flex;
   align-items: center;
   width: 100%;
   @include fluid(margin-bottom, 10px, 20px);
+  transition: 0.38s ease-in-out;
+  &:hover {
+    box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+  }
 }
-.lineImg{
+.lineImg {
   width: 100%;
 
   height: 100%;
   object-position: center;
-  background: #ECECEC;
+  background: #ececec;
   object-fit: cover;
-  border-radius: 10px  0 0 10px;
-
+  border-radius: 10px 0 0 10px;
 }
-.lineContain{
+.lineContain {
   @include fluid(width, 150px, 255px);
   @include fluid(height, 135px, 215px);
   position: relative;
   @include fluid(margin-right, 15px, 30px);
 }
-.lineTitle{
-  @include fluid(font-size,12px, 14px);
+.lineTitle {
+  @include fluid(font-size, 12px, 14px);
   color: #000;
   font-weight: 500;
   @include fluid(margin-bottom, 3px, 5px);
 }
-.grabe{
+.grabe {
   display: flex;
   align-items: center;
-  @include fluid(font-size,10px, 12px);
+  @include fluid(font-size, 10px, 12px);
   color: #858585;
   font-weight: 500;
   @include fluid(margin-bottom, 15px, 17px);
 }
-.lineStar{
+.lineStar {
   @include fluid(width, 10px, 14px);
   @include fluid(height, 10px, 14px);
   object-fit: contain;
   @include fluid(margin-right, 4px, 5px);
 }
-.description{
-  @include fluid(font-size,12px, 14px);
+.description {
+  @include fluid(font-size, 12px, 14px);
   font-weight: 500;
   color: #838383;
   @include fluid(margin-bottom, 15px, 20px);
@@ -211,19 +217,18 @@
   line-clamp: 6;
   box-orient: vertical;
 }
-.lineSell{
+.lineSell {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-.lineValue{
-@include fluid(font-size,14px, 16px);
+.lineValue {
+  @include fluid(font-size, 14px, 16px);
   color: #000;
   font-weight: 600;
-
 }
-.lineFavorite{
-  border: 1px solid #CCCCCC;
+.lineFavorite {
+  border: 1px solid #cccccc;
   border-radius: 3px;
   @include fluid(height, 25px, 35px);
   @include fluid(width, 35px, 45px);
@@ -234,34 +239,34 @@
   display: flex;
   cursor: pointer;
   align-items: center;
-justify-content: center;
+  justify-content: center;
   @include fluid(margin-right, 7px, 10px);
-  transition: .38s ease-in-out;
-  &:hover{
-    border: 1px solid #00FFC2;
+  transition: 0.38s ease-in-out;
+  &:hover {
+    border: 1px solid #00ffc2;
   }
 }
-.lineBuy{
+.lineBuy {
   cursor: pointer;
   @include fluid(padding-left, 10px, 20px);
   @include fluid(padding-right, 10px, 20px);
- @include fluid(height, 25px, 35px);
+  @include fluid(height, 25px, 35px);
   border: 1px solid #ccc;
   border-radius: 3px;
   display: flex;
   align-items: center;
-  transition: .38s ease-in-out;
-  &:hover{
-    border: 1px solid #00FFC2;
+  transition: 0.38s ease-in-out;
+  &:hover {
+    border: 1px solid #00ffc2;
   }
 }
-.lineBuyText{
-  @include fluid(font-size,12px, 14px);
+.lineBuyText {
+  @include fluid(font-size, 12px, 14px);
   color: #000;
   font-weight: 500;
   @include fluid(margin-right, 7px, 10px);
 }
-.lineBuyIcon{
+.lineBuyIcon {
   @include fluid(width, 15px, 18px);
   @include fluid(height, 15px, 18px);
   object-fit: contain;

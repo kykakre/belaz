@@ -4,9 +4,10 @@ import star from "../../assets/star.svg";
 import buy from "../../assets/buy.svg";
 import favorite from "../../assets/favorite.svg";
 import picture from "../../assets/nullPicture.png";
+import { Link } from "react-router-dom";
 const ProductItemLine = (props) => {
   return (
-    <div className={style.lineFlex}>
+    <Link to={"/product/" + props.id} className={style.lineFlex}>
       <div className={style.lineContain}>
         <img
           alt="product"
@@ -41,7 +42,7 @@ const ProductItemLine = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

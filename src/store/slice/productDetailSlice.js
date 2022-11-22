@@ -23,7 +23,7 @@ export const productDetailSlice = createSlice({
 export const GetDetailProducts = (id) => {
   return async (dispatch) => {
     dispatch(productDetailSlice.actions.fetchDetail());
-    const response = await GetProductDetail(page, limit);
+    const response = await GetProductDetail(id);
     dispatch(productDetailSlice.actions.successFetchDetail(response));
   };
 };

@@ -1,0 +1,118 @@
+@import "../../style/Mixins.scss";
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include fluid(margin-bottom, 40px, 55px);
+}
+.img {
+  @include fluid(width, 300px, 350px);
+  @include fluid(height, 300px, 350px);
+  object-fit: contain;
+  object-position: center;
+}
+.item {
+  width: 50%;
+}
+.grabe {
+  display: flex;
+  align-items: center;
+  @include fluid(margin-bottom, 15px, 20px);
+}
+.icon {
+  @include fluid(height, 10px, 14px);
+  @include fluid(width, 10px, 14px);
+  object-fit: contain;
+  object-position: center;
+  margin-right: 5px;
+}
+.grabeText {
+  @include fluid(font-size, 10px, 12px);
+  color: #cccccc;
+  font-weight: 500;
+}
+.title {
+  @include fluid(font-size, 18px, 24px);
+  color: #000;
+  font-weight: 500;
+  @include fluid(margin-bottom, 20px, 30px);
+}
+.count {
+  @include fluid(margin-top, 15px, 30px);
+  @include fluid(font-size, 14px, 16px);
+  color: #000;
+  @include fluid(margin-bottom, 7px, 10px);
+}
+.countFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.countPrice {
+  @include fluid(font-size, 18px, 20px);
+  font-weight: 700;
+  @include fluid(margin-right, 30px, 50px);
+}
+.countTextFlex {
+  display: flex;
+  align-items: center;
+}
+.countText {
+  @include fluid(font-size, 16px, 18px);
+}
+.countBtnFlex {
+  display: flex;
+}
+.favorite {
+  @include fluid(width, 40px, 46px);
+  @include fluid(height, 40px, 46px);
+  background: #f2f2f2;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.38s ease-in-out;
+  @include fluid(margin-right, 7px, 10px);
+  &:hover {
+    background: #00ffc2;
+  }
+}
+.favoriteIcon {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include fluid(height, 17px, 20px);
+  @include fluid(width, 17px, 20px);
+  object-fit: contain;
+}
+.basket {
+  background: #f2f2f2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include fluid(padding-left, 30px, 55px);
+  @include fluid(padding-right, 30px, 55px);
+  @include fluid(font-size, 14px, 16px);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.38s ease-in-out;
+  &:hover {
+    background: #00ffc2;
+  }
+}
+.descriptionTitle {
+  @include fluid(font-size, 12px, 14px);
+  width: fit-content;
+  color: #00cf9d;
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  border-bottom: 2px solid #00cf9d;
+  @include fluid(margin-bottom, 20px, 30px);
+}
+.description {
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(margin-bottom, 70px, 100px);
+}
