@@ -57,9 +57,29 @@ const Nav = () => {
             Контакты
           </NavLink>
         </li>
+        {localStorage.getItem("token") !== undefined ? (
+          <li>
+            <NavLink
+              to="/lk"
+              className={({ isActive }) =>
+                isActive ? `${style.link} ${style.active}` : `${style.link} `
+              }
+            >
+              Кабинет
+            </NavLink>
+          </li>
+        ) : (
+          ""
+        )}
       </ul>
-      <ModalItem />
-      {localStorage.setItem("token", "") !== undefined ? <NavIcon /> : ""}
+      {localStorage.getItem("token") !== undefined ? <NavIcon /> : ""}
+      {localStorage.getItem("token") !== undefined ? (
+        ""
+      ) : (
+        <>
+          <ModalItem />
+        </>
+      )}
     </div>
   );
 };
