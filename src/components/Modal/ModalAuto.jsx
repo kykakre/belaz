@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./Modal.module.scss";
 import logo from "../../assets/logoModal.svg";
 import ModalItem from "./ModalItem";
@@ -6,7 +6,6 @@ import { Autorize } from "../../api/security.js";
 const ModalAuto = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const Auto = (email, password) => {
     Autorize(email, password);
   };

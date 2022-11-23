@@ -6,10 +6,7 @@ export const Autorize = async (email, password) => {
     email: email,
     password: password,
   });
-  return (
-    localStorage.setItem("token", response.data.data.token),
-    console.log(localStorage.getItem("token"))
-  );
+  return localStorage.setItem("token", response.data.data.token);
 };
 export const Registration = async (
   email,

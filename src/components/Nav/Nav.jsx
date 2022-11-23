@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import style from "./Nav.module.scss";
 import ModalItem from "../Modal/ModalItem";
 import NavIcon from "./NavIcon";
 const Nav = () => {
+  const [token, setToken] = useState("");
+
+  useEffect(() => {
+    const items = localStorage.token;
+    if (items) {
+      setToken(items);
+    }
+  }, [token]);
+
   return (
     <div className={style.nav}>
       <ul>
@@ -57,7 +66,7 @@ const Nav = () => {
             Контакты
           </NavLink>
         </li>
-        {localStorage.getItem("token") !== undefined ? (
+        {token ? (
           <li>
             <NavLink
               to="/lk"
@@ -69,11 +78,11 @@ const Nav = () => {
             </NavLink>
           </li>
         ) : (
-          ""
+          <></>
         )}
       </ul>
-      {localStorage.getItem("token") !== undefined ? <NavIcon /> : ""}
-      {localStorage.getItem("token") !== undefined ? (
+      {token ? <NavIcon /> : ""}
+      {token ? (
         ""
       ) : (
         <>
