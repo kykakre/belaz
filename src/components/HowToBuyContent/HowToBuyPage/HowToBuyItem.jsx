@@ -1,13 +1,18 @@
-import React from 'react';
-import style from "./HowToBuy.module.scss"
+import React from "react";
+import style from "./HowToBuy.module.scss";
 const HowToBuyItem = (props) => {
-    return (
+  return (
+    <>
+      {props.subType === props.number ? (
         <div className={style.item}>
-            <h1 >{props.title}</h1>
-            <p >{props.text}</p>
-
+          <h1>{props.title}</h1>
+          <p>{props.description}</p>
         </div>
-    );
+      ) : (
+        ""
+      )}
+    </>
+  );
 };
 
 export default HowToBuyItem;
