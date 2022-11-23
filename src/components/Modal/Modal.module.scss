@@ -96,4 +96,8 @@
   color: #a8a8a8;
   @include fluid(margin-top, 25px, 35px);
   cursor: pointer;
+  transition: 0.38s ease-in-out;
+  &:hover {
+    color: #00ffc2;
+  }
 }

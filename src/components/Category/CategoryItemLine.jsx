@@ -14,7 +14,9 @@ const CategoryItemLine = (props) => {
       <div className={style.column}>
         <div className={style.flex}>
           <div className={style.titleLong}>{props.title}</div>
-          <div className={style.countProduct}>{props.title}</div>
+          <div className={style.countProduct}>
+            {props.countProducts} товаров в категории
+          </div>
         </div>
         <div className={style.descriptionLong}>{props.description}</div>
         <div className={style.flexEnd}>

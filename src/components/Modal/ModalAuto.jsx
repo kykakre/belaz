@@ -43,8 +43,6 @@ const ModalAuto = (props) => {
           onClick={(e) => {
             e.preventDefault();
             Auto(email, password);
-            console.log(email, password);
-            console.log("gag");
           }}
         >
           Войти
