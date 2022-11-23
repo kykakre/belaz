@@ -6,13 +6,6 @@ import NavIcon from "./NavIcon";
 const Nav = () => {
   const [token, setToken] = useState("");
 
-  useEffect(() => {
-    const items = localStorage.token;
-    if (items) {
-      setToken(items);
-    }
-  }, [token]);
-
   return (
     <div className={style.nav}>
       <ul>
