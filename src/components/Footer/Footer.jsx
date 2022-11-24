@@ -55,14 +55,14 @@ const Footer = (props) => {
             Как купить
           </NavLink>
           <NavLink
-            to="aboutCompany"
+            to="/contact"
             onClick={() => window.scrollTo(0, 0)}
             className={style.link}
           >
             О компании
           </NavLink>
           <NavLink
-            to="delivery"
+            to="/howToBuy"
             onClick={() => window.scrollTo(0, 0)}
             className={style.link}
           >
