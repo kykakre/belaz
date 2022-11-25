@@ -4,6 +4,16 @@ import style from "./NavUnder.module.scss";
 export default function NavUnder() {
   return (
     <ul>
+        <li>
+            <NavLink
+                className={({ isActive }) =>
+                    isActive ? `${style.link} ${style.active}` : `${style.link} `
+                }
+                to="category"
+            >
+                Категории
+            </NavLink>
+        </li>
       {/*<li>*/}
       {/*  <NavLink*/}
       {/*    className={({ isActive }) =>*/}
@@ -34,16 +44,17 @@ export default function NavUnder() {
       {/*    Спецпредложения*/}
       {/*  </NavLink>*/}
       {/*</li>*/}
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? `${style.link} ${style.active}` : `${style.link} `
-          }
-          to="popular"
-        >
-          Популярные
-        </NavLink>
-      </li>
+      {/*<li>*/}
+      {/*  <NavLink*/}
+      {/*    className={({ isActive }) =>*/}
+      {/*      isActive ? `${style.link} ${style.active}` : `${style.link} `*/}
+      {/*    }*/}
+      {/*    to="popular"*/}
+      {/*  >*/}
+      {/*    Популярные*/}
+      {/*  </NavLink>*/}
+      {/*</li>*/}
+
       <li>
         <NavLink
           className={({ isActive }) =>
@@ -54,16 +65,16 @@ export default function NavUnder() {
           Актуальные
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? `${style.link} ${style.active}` : `${style.link} `
-          }
-          to="recommend"
-        >
-          Мы рекомендуем
-        </NavLink>
-      </li>
+      {/*<li>*/}
+      {/*  <NavLink*/}
+      {/*    className={({ isActive }) =>*/}
+      {/*      isActive ? `${style.link} ${style.active}` : `${style.link} `*/}
+      {/*    }*/}
+      {/*    to="recommend"*/}
+      {/*  >*/}
+      {/*    Мы рекомендуем*/}
+      {/*  </NavLink>*/}
+      {/*</li>*/}
       <li>
         <NavLink
           className={({ isActive }) =>

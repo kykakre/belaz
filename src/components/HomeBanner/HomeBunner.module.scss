@@ -1,5 +1,7 @@
 @import "../../style/Mixins.scss";
-
+.content{
+  @include  container();
+}
 .bunner{
   background: url("../../assets/bunnerBackground.png");
   background-repeat: no-repeat;

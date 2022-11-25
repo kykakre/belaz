@@ -17,19 +17,19 @@ const Footer = (props) => {
         </div>
         <div className={style.item}>
           <div className={style.title}>Каталог</div>
-          <NavLink to="discount" className={style.link}>
-            Скидки
-          </NavLink>
+          {/*<NavLink to="discount" className={style.link}>*/}
+          {/*  Скидки*/}
+          {/*</NavLink>*/}
           {/*<NavLink to="special" className={style.link}>Спецпредложение</NavLink>*/}
-          <NavLink to="popular" className={style.link}>
-            Популярное
-          </NavLink>
+          {/*<NavLink to="popular" className={style.link}>*/}
+          {/*  Популярное*/}
+          {/*</NavLink>*/}
           <NavLink to="actual" className={style.link}>
             Актуальные
           </NavLink>
-          <NavLink to="recommend" className={style.link}>
-            Мы рекомендуем
-          </NavLink>
+          {/*<NavLink to="recommend" className={style.link}>*/}
+          {/*  Мы рекомендуем*/}
+          {/*</NavLink>*/}
         </div>
         <div className={style.item}>
           <div className={style.title}>Навигация</div>
