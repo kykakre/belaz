@@ -1,10 +1,12 @@
 import React from 'react';
 import style from "./Title.module.scss";
-import like from "../../assets/like.svg";
+import {useParams} from "react-router-dom"
 const TitleSearch = () => {
+    let id = useParams()
+
     return (
         <div className={style.flex}>
-            <div className={style.title}>Товар по запросу</div>
+            <div className={style.title}>Товар по запросу "{id?.id}"</div>
         </div>
     );
 };
