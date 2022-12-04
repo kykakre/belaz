@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import Title from "../components/Title/Title";
 import Product from "../components/Product/Product";
 import Preloader from "../components/Preloader/Preloader";
+import {GetSearch} from "../store/slice/searcSlice.js";
 
 export default function ProductDetail(props) {
   const id = useParams();
@@ -18,7 +19,7 @@ export default function ProductDetail(props) {
   return (
     <div className="content">
       {props.detailLoading ? <Preloader /> : ""}
-      <Search />
+      <Search GetSearch={props.GetSearch} />
       <BreadcrumbDetailProduct detail={props.detail?.data} />
       <DetailProduct detail={props.detail.data} />
       <Title title={"Мы рекомендуем"} arrow={true} link="/recommend" />

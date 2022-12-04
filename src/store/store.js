@@ -18,6 +18,7 @@ import newsDetailReducer from "./slice/newsDetailSlice.js";
 import filterReducer from "./slice/filterSlice.js";
 import feedbackReducer from "./slice/feedbackSlice.js";
 import productDetailReducer from "./slice/productDetailSlice.js";
+import searchReducer from "./slice/searcSlice.js";
 const rootReducer = combineReducers({
   productReducer,
   popularReducer,
@@ -33,6 +34,7 @@ const rootReducer = combineReducers({
   orderReducer,
   swiperReducer,
   basketReducer,
+  searchReducer,
   newsDetailReducer,
   filterReducer,
   feedbackReducer,

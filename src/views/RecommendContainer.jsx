@@ -5,6 +5,7 @@ import {
   GetRecommends,
 } from "../store/slice/recommendSlice.js";
 import { GetFilter } from "../store/slice/filterSlice.js";
+import {GetSearch} from "../store/slice/searcSlice.js";
 let mapStateToProps = (state) => {
   return {
     recommend: state.recommendReducer.recommends,
@@ -17,5 +18,6 @@ const RecommendContainer = connect(mapStateToProps, {
   GetRecommends,
   GetRecommendFiltered,
   GetFilter,
+  GetSearch
 })(Recommend);
 export default RecommendContainer;

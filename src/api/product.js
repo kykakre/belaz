@@ -272,6 +272,18 @@ export const GetProductDetail = async (id) => {
   );
 };
 
+export const GetSeacrhProducts = async (page,limit,name) =>{
+  return await Api.get( "api/products?pagination[page]=" +
+      page +
+      "&pagination[limit]=" +
+      limit +
+      "&search[name]=" +
+      name,
+      { RequestData: {} }).then((response) => {
+    return response.data;
+  });
+}
+
 export const GetProductsAll = async (page, limit) => {
   return await Api.get(
     "api/products?pagination[page]=" + page + "&pagination[limit]=" + limit,

@@ -7,7 +7,6 @@ const PaginationBlock = (props) => {
     props.setCurrent(page);
     window.scrollTo(0, 0);
   };
-  console.log(props.total);
   return (
     <>
       {props.total === 0 ? (

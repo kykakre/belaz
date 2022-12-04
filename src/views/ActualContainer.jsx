@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import Actual from "./Actual.jsx";
 import {GetActual, GetActualFiltered} from "../store/slice/actualSlice.js";
 import {GetFilter} from "../store/slice/filterSlice.js";
+import {GetSearch} from "../store/slice/searcSlice.js";
 let mapStateToProps = (state) => {
     return {
         actual:state.actualReducer.actual,
@@ -10,5 +11,5 @@ let mapStateToProps = (state) => {
     };
 };
 
-const ActualContainer = connect(mapStateToProps,{GetActual,GetFilter,GetActualFiltered})(Actual);
+const ActualContainer = connect(mapStateToProps,{GetActual,GetFilter,GetActualFiltered,GetSearch})(Actual);
 export default ActualContainer;

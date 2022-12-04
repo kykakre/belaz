@@ -3,6 +3,7 @@ import Search from "../components/Search/Search.jsx";
 import BreadcrumbNews from "../components/Breadcrumb/BreadcrumbNews.jsx";
 import NewsContent from "../components/NewsContent/NewsContent.jsx";
 import Preloader from '../components/Preloader/Preloader.jsx';
+import {GetSearch} from "../store/slice/searcSlice.js";
 
 const News = (props) => {
 
@@ -28,7 +29,7 @@ const News = (props) => {
     return (
         <div className="content">
             {props.newsLoading?<Preloader/>:""}
-            <Search/>
+            <Search GetSearch={props.GetSearch}/>
             <BreadcrumbNews/>
             <NewsContent  year={year} setYear={setYear} GetNewsAll={props.GetNewsAll} detail={props.detail} news={props.news}/>
         </div>

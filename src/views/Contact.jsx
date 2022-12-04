@@ -3,6 +3,7 @@ import Search from "../components/Search/Search.jsx";
 import BreadcrumbContacts from "../components/Breadcrumb/BreadcrumbContacts.jsx";
 import Title from "../components/Title/Title.jsx";
 import ContactsContent from "../components/ContactsContent/ContactsContent.jsx";
+import {GetSearch} from "../store/slice/searcSlice.js";
 
 const Contact = (props) => {
   useEffect(() => {
@@ -10,7 +11,7 @@ const Contact = (props) => {
   }, []);
   return (
     <div className="content">
-      <Search />
+      <Search GetSearch={props.GetSearch}/>
       <BreadcrumbContacts />
       <Title arrow={false} title="Контакты" />
       <ContactsContent

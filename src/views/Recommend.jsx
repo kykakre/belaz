@@ -4,6 +4,7 @@ import BreadcrumbRecomendate from "../components/Breadcrumb/BreadcrumbRecomendat
 import ProductRecomend from "../components/Product/ProductRecomend.jsx";
 import Preloader from "../components/Preloader/Preloader.jsx";
 import { GetRecommendFiltered } from "../store/slice/recommendSlice.js";
+import {GetSearch} from "../store/slice/searcSlice.js";
 
 const Recommend = (props) => {
   useEffect(() => {
@@ -14,7 +15,7 @@ const Recommend = (props) => {
   return (
     <div className="content">
       {props.recommendLoading ? <Preloader /> : ""}
-      <Search />
+      <Search GetSearch={props.GetSearch}/>
       <BreadcrumbRecomendate />
       <ProductRecomend
         GetRecommends={props.GetRecommends}

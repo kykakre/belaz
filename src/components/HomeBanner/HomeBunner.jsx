@@ -2,11 +2,12 @@ import React from 'react';
 import style from "./HomeBunner.module.scss"
 import {NavLink} from "react-router-dom";
 import Search from "../Search/Search.jsx";
+import {GetSearch} from "../../store/slice/searcSlice.js";
 const HomeBunner = (props) => {
     return (
         <>
             <div className={style.content}>
-                <Search/>
+                <Search GetSearch={props.GetSearch}/>
 
             </div>
             <div className={style.bunner}>

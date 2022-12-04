@@ -22,6 +22,7 @@ import BasketContainer from "./views/BasketContainer.jsx";
 import BasketOrderContainer from "./views/BasketOrderContainer.jsx";
 import ProductsContainer from "./views/ProductsContainer.jsx";
 import ProductDetailContainer from "./views/ProductDetailContainer.jsx";
+import SearchContainer from "./views/SearchContainer";
 function App() {
   return (
     <BrowserRouter>
@@ -40,6 +41,7 @@ function App() {
           <Route path="/news/:id" element={<NewsDetailContainer />} />
           <Route path="contact" element={<ContactContainer />} />
           <Route path="actual" element={<ActualContainer />} />
+          <Route path="/search/:id" element={<SearchContainer />} />
           <Route path="recommend" element={<RecommendContainer />} />
           <Route path="howToBuy/*" element={<HowToBuyContainer />} />
           <Route path="lk/*" element={<LkContainer />} />
